@@ -183,6 +183,70 @@ export const getAllFlexibleContentComponents = async (
 													}
 												}
 											}
+											... on ${postTypeFlexibleContent}_GallerySlider {
+												fieldGroupName
+												displaySection
+												gallerySlider {
+              										title
+              										paragraph
+													buttonLink {
+                										url
+                										title
+                										target
+                									}
+              										backgroundImage {
+              											altText
+              											sourceUrl
+              											mediaDetails {
+              												height
+              												width
+              											}
+              										}
+													
+              									}
+											}
+											... on ${postTypeFlexibleContent}_SkillsExperiences {
+            									fieldGroupName
+            									title
+            									paragraph
+												displaySection
+												image {
+													altText
+													sourceUrl
+													mediaDetails {
+														height
+														width
+													}
+												}
+            									skillsExperiencesGrid {
+            										text
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
+            									}
+            								}
+											... on ${postTypeFlexibleContent}_VideoBlock {
+												fieldGroupName
+												title
+												video
+												subtitle
+												paragraph
+												displayVideo
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+												videoBackgroundImage {
+            										sourceUrl
+              									}
+											}
 										}
 									}
 								}

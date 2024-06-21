@@ -6,9 +6,6 @@ import {motion} from "framer-motion";
 import {IOurServicesCard} from "@/types/components";
 import {initial, stagger, fadeInUp} from "@/animations/animations";
 
-// Styling
-import styles from "../../styles/components/OurServices.module.scss";
-
 // Components
 import Paragraph from "../Elements/Paragraph";
 
@@ -76,7 +73,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="text-center lg:text-left mx-auto lg:mx-0 text-accent-default group-hover:text-white tracking-[0.05rem] text-tiny mt-1 border-b-2 w-fit transition-all duration-500 ease-in-out"
+								className="font-aspektaMain uppercase text-center lg:text-left mx-auto lg:mx-0 text-accent-default group-hover:text-white tracking-[0.05rem] text-tiny mt-1 border-b-2 w-fit transition-all duration-500 ease-in-out"
 							>
 								{link?.title}
 							</motion.button>

@@ -1,0 +1,32 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.gallerySlider {
+	.externalLink {
+		font-family: $main;
+	}
+
+	.swiper-button-prev,
+	.swiper-button-next {
+		@apply border-2 border-primary-three hover:border-primary-two bg-transparent hover:bg-primary-two;
+	}
+
+	.swiper-button-prev::after {
+		content: "previous";
+		width: 15px !important;
+		height: 15px !important;
+		font-size: 15px !important;
+		font-weight: 900 !important;
+		color: $white !important;
+	}
+
+	.swiper-button-next::after {
+		content: "next";
+		width: 15px !important;
+		height: 15px !important;
+		font-size: 15px !important;
+		font-weight: 900 !important;
+		color: $white !important;
+	}
+}

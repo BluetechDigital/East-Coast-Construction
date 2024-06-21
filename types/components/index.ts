@@ -33,6 +33,21 @@ export type IHeroTwo = {
 		};
 	};
 };
+export type IVideoBlock = {
+	title: string;
+	video: string;
+	subtitle: string;
+	paragraph: string;
+	displayVideo: boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	videoBackgroundImage: {
+		sourceUrl: string;
+	};
+};
 export type IOurServices = {
 	title: string;
 	subtitle: string;
@@ -62,6 +77,27 @@ export type IOurServices = {
 		}
 	];
 };
+export type IGallerySlider = {
+	gallerySlider: [
+		{
+			title: string;
+			paragraph: string;
+			buttonLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			backgroundImage: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type IAccreditations = {
 	paragraph: string;
 	accreditationsGrid: [
@@ -81,6 +117,31 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 	displayParagraph: boolean;
+};
+export type ISkillsExperiences = {
+	title: string;
+	paragraph: string;
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+	skillsExperiencesGrid: [
+		{
+			text: string;
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
 };
 export type IAboutContentImage = {
 	title: string;

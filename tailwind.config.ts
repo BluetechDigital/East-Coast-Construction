@@ -53,7 +53,7 @@ const config: Config = {
 					three: "#a70101",
 					light: "#eb0000",
 					dark: "#a70107",
-					darker: "#720004",
+					darker: "#290001",
 				},
 				accent: {
 					default: "#f7a500",
