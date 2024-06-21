@@ -33,10 +33,126 @@ export type IHeroTwo = {
 		};
 	};
 };
+export type IOurServices = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	servicesGrid: [
+		{
+			title: string;
+			paragraph: string;
+			link: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			icon: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
+export type IAccreditations = {
+	paragraph: string;
+	accreditationsGrid: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 	displayParagraph: boolean;
+};
+export type IAboutContentImage = {
+	title: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	cardOne: {
+		title: string;
+		subtitle: string;
+		buttonLink: {
+			url: string;
+			title: string;
+			target: string;
+		};
+		buttonLinkTwo: {
+			url: string;
+			title: string;
+			target: string;
+		};
+		backgroundImage: {
+			altText: string;
+			sourceUrl: string;
+			mediaDetails: {
+				width: number;
+				height: number;
+			};
+		};
+	};
+	cardTwo: {
+		title: string;
+		subtitle: string;
+		link: {
+			url: string;
+			title: string;
+			target: string;
+		};
+	};
+	cardThree: {
+		title: string;
+		subtitle: string;
+		link: {
+			url: string;
+			title: string;
+			target: string;
+		};
+	};
+};
+export type IContentSectorGrid = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	sectorGrid: [
+		{
+			title: string;
+			link: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
 };
 
 // Global
@@ -224,6 +340,7 @@ export type INewsletter = {
 };
 export type IRenderStars = {
 	rating: number;
+	color: string;
 };
 export type IVideoWrapper = {
 	children: React.ReactNode;

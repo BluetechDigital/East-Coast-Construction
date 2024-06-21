@@ -7,7 +7,7 @@ import {IContentSectorGridCard} from "@/types/components";
 import {initial, fadeInUp} from "@/animations/animations";
 
 // Styling
-import styles from "../../styles/components/OurServices.module.scss";
+import styles from "@/styles/components/OurServices.module.scss";
 
 const ContentSectorGridCard: FC<IContentSectorGridCard> = ({
 	link,

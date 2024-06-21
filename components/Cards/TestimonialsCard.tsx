@@ -37,7 +37,7 @@ const TestimonialsCard: FC<ITestimonialsCard> = ({
 					<div className="flex items-center justify-center my-2 gap-4">
 						<div className="w-full mb-1 h-[2px] bg-grey rounded-full hidden sm:block" />
 						<div className="w-full sm:w-[10rem] flex flex-wrap items-center justify-center lg:justify-start mb-2">
-							<RenderStars rating={rating} />
+							<RenderStars rating={rating} color="Yellow" />
 						</div>
 					</div>
 					<div>

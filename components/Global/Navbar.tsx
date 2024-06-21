@@ -59,6 +59,9 @@ const Navbar: FC = () => {
 				<NoticeInfoBanner />
 				<div className="py-2 px-4 bg-lightGreyTwo flex items-center justify-between w-auto gap-2 lg:items-baseline">
 					<div className="mx-auto md:mx-0 flex items-center justify-center gap-4">
+						<h4 className="font-aspektaMain text-tiny text-black uppercase tracking-tight hidden lg:block">
+							Need a Civil Engineering Specialists?
+						</h4>
 						<div
 							className={
 								globalContext?.themesOptionsContent?.email
@@ -66,7 +69,7 @@ const Navbar: FC = () => {
 									: "hidden"
 							}
 						>
-							<div className="hidden md:flex items-center justify-center w-7 h-7 rounded-full bg-accent-two sm:mr-1">
+							<div className="hidden md:flex items-center justify-center w-7 h-7 rounded-full bg-accent-default sm:mr-1">
 								<svg
 									fill="#ffffff"
 									className="w-4 h-4"
@@ -87,7 +90,7 @@ const Navbar: FC = () => {
 								</svg>
 							</div>
 							<Link
-								className="text-sm tracking-wide text-black hover:text-accent-two"
+								className="text-sm xl:text-tiny tracking-wide text-black hover:text-accent-two"
 								href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 							>
 								{globalContext?.themesOptionsContent?.email}
@@ -100,7 +103,7 @@ const Navbar: FC = () => {
 									: "hidden"
 							}
 						>
-							<div className="hidden md:flex items-center justify-center w-7 h-7 rounded-full bg-accent-two sm:mr-1">
+							<div className="hidden md:flex items-center justify-center w-7 h-7 rounded-full bg-accent-default sm:mr-1">
 								<svg
 									fill="#ffffff"
 									viewBox="0 0 32 32"
@@ -123,7 +126,7 @@ const Navbar: FC = () => {
 								className="text-sm tracking-wide text-black hover:text-accent-two"
 								href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 							>
-								{globalContext?.themesOptionsContent?.phoneNumber}
+								TEL: {globalContext?.themesOptionsContent?.phoneNumber}
 							</Link>
 						</div>
 					</div>
@@ -252,6 +255,14 @@ const Navbar: FC = () => {
 								/>
 							</svg>
 						</Link>
+						<Image
+							priority
+							width={500}
+							height={500}
+							alt="USA Flag Logo"
+							src="/svg/usa-flag.svg"
+							className="object-contain object-center w-[35px] h-[35px]"
+						/>
 					</div>
 				</div>
 				<BookAppointment link={`/contact`} />

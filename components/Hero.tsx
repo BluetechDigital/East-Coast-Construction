@@ -64,7 +64,7 @@ const Hero: FC<IHero> = ({
 									variants={stagger}
 									whileInView="animate"
 									viewport={{once: true}}
-									className="w-full sm:w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 md:grid-cols-3 items-center justify-center lg:justify-start gap-6"
+									className="w-full sm:w-fit max-w-lg lg:max-w-full mx-auto lg:mx-0 py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 items-center justify-center lg:justify-start gap-6"
 								>
 									<div className="flex items-center justify-center lg:justify-start gap-3">
 										<Image
@@ -76,7 +76,7 @@ const Hero: FC<IHero> = ({
 										/>
 										<div className="flex flex-col gap-1">
 											<div className="flex items-center justify-start gap-1">
-												<RenderStars rating={5} />
+												<RenderStars rating={5} color="White" />
 											</div>
 											<h3 className="font-medium text-tiny font-openSauceSansRegular text-white">
 												4.8 Rating
@@ -93,24 +93,7 @@ const Hero: FC<IHero> = ({
 										/>
 										<div className="flex flex-col gap-1">
 											<div className="flex items-center justify-start gap-1">
-												<RenderStars rating={5} />
-											</div>
-											<h3 className="font-medium text-tiny font-openSauceSansRegular text-white">
-												4.9 Rating
-											</h3>
-										</div>
-									</div>
-									<div className="flex items-center justify-center lg:justify-start gap-3">
-										<Image
-											width={1000}
-											height={1000}
-											alt={`Checkatrade Logo`}
-											src="/img/Checkatrade-checkmark.png"
-											className="bg-white rounded-full my-auto lg:mx-0 p-1 w-10 h-10 object-cover object-center"
-										/>
-										<div className="flex flex-col gap-1">
-											<div className="flex items-center justify-start gap-1">
-												<RenderStars rating={5} />
+												<RenderStars rating={5} color="White" />
 											</div>
 											<h3 className="font-medium text-tiny font-openSauceSansRegular text-white">
 												4.9 Rating
@@ -126,7 +109,7 @@ const Hero: FC<IHero> = ({
 									aria-label={`${buttonLink?.title}`}
 									className={buttonLink?.url ? "group w-fit" : "hidden"}
 								>
-									<div className="bg-accent-two group-hover:bg-primary-three p-4 lg:px-6 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-left text-paragraph">
+									<div className="bg-accent-default group-hover:bg-primary-three p-4 lg:px-6 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-left text-paragraph">
 										{buttonLink?.title}
 									</div>
 								</Link>
@@ -184,7 +167,7 @@ const Hero: FC<IHero> = ({
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${buttonLinkTwo?.title}`}
-								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer bg-accent-two hover:bg-primary-two transition-all ease-in-out duration-500 font-semibold uppercase text-white text-base text-center font-aspektaMain`}
+								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer bg-accent-default hover:bg-primary-two transition-all ease-in-out duration-500 font-semibold uppercase text-white text-base text-center font-aspektaMain`}
 							>
 								{buttonLinkTwo?.title}
 							</Link>

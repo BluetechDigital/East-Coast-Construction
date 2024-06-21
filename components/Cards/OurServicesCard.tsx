@@ -34,19 +34,26 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 						viewport={{once: true}}
 						className={
 							link?.url
-								? "min-h-[300px] lg:min-h-[365px] xl:min-h-[350px] 2xl:min-h-[325px] h-full max-h-[450px] border-solid border-2 border-white hover:border-primary-three hover:bg-primary-three transition-all duration-500 ease-in-out"
+								? "flex flex-col items-center justify-center min-h-[300px] lg:min-h-[365px] xl:min-h-[350px] 2xl:min-h-[325px] h-full max-h-[450px] border-solid border-2 border-white hover:border-primary-default hover:bg-primary-default transition-all duration-500 ease-in-out"
 								: "hidden"
 						}
 					>
-						<div className="flex flex-col p-6 justify-end gap-4">
+						<div className="h-full flex flex-col p-6 justify-center gap-4">
 							<Image
 								alt={icon?.altText}
 								src={icon?.sourceUrl}
-								width={icon?.mediaDetails?.width}
-								height={icon?.mediaDetails?.height}
-								className="w-[50px] h-[50px] mx-auto lg:mx-0 object-contain object-center"
+								width={
+									icon?.mediaDetails?.width ? icon?.mediaDetails?.width : 1000
+								}
+								height={
+									icon?.mediaDetails?.height ? icon?.mediaDetails?.height : 1000
+								}
+								className={
+									icon?.sourceUrl
+										? "w-[50px] h-[50px] mx-auto lg:mx-0 object-contain object-center"
+										: "hidden"
+								}
 							/>
-
 							<div>
 								<motion.h3
 									initial={initial}
@@ -58,11 +65,11 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 								</motion.h3>
 								<Paragraph
 									content={
-										paragraph?.length > 235
-											? paragraph?.substring(0, 235) + "..."
+										paragraph?.length > 200
+											? paragraph?.substring(0, 200) + "..."
 											: paragraph
 									}
-									tailwindStyling="text-center lg:text-left text-white text-base sm:text-tiny tracking-[0.05rem]"
+									tailwindStyling="text-center lg:text-left text-white text-base sm:text-base tracking-[0.05rem]"
 								/>
 							</div>
 							<motion.button

@@ -1,0 +1,17 @@
+// Imports
+@import "../base/fonts";
+@import "../base/colors";
+
+.accreditations {
+	background-image: url("/svg/background/layered-peaks-haikei-white-grey-mobile.svg");
+
+	.title {
+		span {
+			@apply text-black;
+		}
+	}
+
+	@media (min-width: 1024px) {
+		background-image: url("/svg/background/layered-peaks-haikei-white-grey.svg");
+	}
+}

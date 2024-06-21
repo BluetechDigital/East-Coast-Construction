@@ -181,7 +181,7 @@ const Footer: FC = () => {
 					<div className="flex flex-col lg:flex-row items-center lg:items-start justify-center gap-6 xl:gap-14">
 						<div className="flex flex-col px-0">
 							<h3 className="mb-5 text-base tracking-normal text-center text-black uppercase font-aspektaMain lg:text-left">
-								Navigation
+								About
 							</h3>
 							<motion.ul
 								initial={initial}
