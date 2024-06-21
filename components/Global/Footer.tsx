@@ -502,14 +502,14 @@ const Footer: FC = () => {
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="w-auto lg:py-2"
+						className="w-auto lg:py-2 flex flex-col lg:flex-row items-center justify-between gap-4"
 					>
 						<Paragraph
 							content={globalContext?.themesOptionsContent?.copyrightText}
 							tailwindStyling="max-w-full lg:max-w-lg text-lightGreyTwo text-sm text-center lg:text-left"
 						/>
 						<Link
-							className="lg:inline-block items-center justify-center mt-2 px-1 text-lightGreyTwo hover:text-accent-default hover:underline"
+							className="lg:inline-block items-center justify-center px-1 text-lightGreyTwo hover:text-accent-default hover:underline"
 							href={`https://bluetech-digital.co.uk`}
 							target="_blank"
 						>
@@ -542,7 +542,7 @@ const Footer: FC = () => {
 									>
 										<Link
 											href={`${item?.node?.url}`}
-											className="text-lightGreyTwo transition-all duration-200 ease-in-out text-sm hover:text-accent-default"
+											className="text-lightGreyTwo font-aspektaMain uppercase transition-all duration-200 ease-in-out text-sm hover:text-accent-default"
 										>
 											{item?.node?.label}
 										</Link>

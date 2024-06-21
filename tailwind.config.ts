@@ -50,17 +50,15 @@ const config: Config = {
 				primary: {
 					default: "#660000",
 					two: "#800000",
-					three: "#1414dc",
-					light: "#1616e6",
-					dark: "#01015b",
-					darker: "#00003a",
+					three: "#a70101",
+					light: "#eb0000",
+					dark: "#a70107",
+					darker: "#720004",
 				},
 				accent: {
 					default: "#f7a500",
 					two: "#d89101",
-					three: "#c7a469",
-					four: "#bfa260",
-					light: "#d8bf7c",
+					three: "#ec9e03",
 					dark: "#b17701",
 				},
 				tertiary: {

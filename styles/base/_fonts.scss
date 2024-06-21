@@ -17,3 +17,11 @@
 // Font Stack Properties
 $main: "aspektaMain", sans-serif;
 $body: "aspektaRegular", "PlusJakartaSans", sans-serif;
+
+.font-aspektaMain {
+	font-family: $main;
+}
+
+.font-aspektaRegular {
+	font-family: $body;
+}

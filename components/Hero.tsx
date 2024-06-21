@@ -29,12 +29,7 @@ const Hero: FC<IHero> = ({
 	return (
 		<>
 			<div className={styles.hero + " hero relative z-50 flex flex-col h-fit"}>
-				<div
-					className="lg:relative pt-[65px] md:pt-[112px] lg:pt-[112px] flex flex-col lg:flex-row"
-					style={{
-						clipPath: `ellipse(100% 55% at 48% 44%)`,
-					}}
-				>
+				<div className="lg:relative pt-[65px] md:pt-[112px] lg:pt-[112px] flex flex-col lg:flex-row">
 					<div
 						className="w-full h-screen sm:h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
@@ -131,47 +126,8 @@ const Hero: FC<IHero> = ({
 									aria-label={`${buttonLink?.title}`}
 									className={buttonLink?.url ? "group w-fit" : "hidden"}
 								>
-									<div className="bg-accent-two group-hover:bg-primary-default p-4 lg:px-6 flex justify-between gap-6 h-full transition-all duration-500 ease-in-out">
-										<motion.h3
-											initial={initial}
-											whileInView={fadeInUp}
-											viewport={{once: true}}
-											className="text-white font-extrabold uppercase text-left text-paragraph"
-										>
-											{buttonLink?.title}
-										</motion.h3>
-										<svg
-											xmlns="http://www.w3.org/2000/svg"
-											width="31.905"
-											height="24.247"
-											viewBox="0 0 31.905 24.247"
-											className="w-6 h-6 text-white group-hover:translate-x-2 group-hover:rotate-[-45deg] transition-all duration-500 ease-in-out self-end"
-										>
-											<g
-												id="Group_14"
-												data-name="Group 14"
-												transform="translate(-443.5 -2073.925)"
-											>
-												<line
-													id="Line_2"
-													data-name="Line 2"
-													x2="30.063"
-													transform="translate(443.5 2086.054)"
-													fill="none"
-													stroke="#ffffff"
-													strokeWidth="3"
-												/>
-												<path
-													id="Path_49"
-													data-name="Path 49"
-													d="M463.015,2090.015l11.306,11.082L463.3,2112.131"
-													transform="translate(-1.047 -15.019)"
-													fill="none"
-													stroke="#ffffff"
-													strokeWidth="3"
-												/>
-											</g>
-										</svg>
+									<div className="bg-accent-two group-hover:bg-primary-three p-4 lg:px-6 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-left text-paragraph">
+										{buttonLink?.title}
 									</div>
 								</Link>
 							</div>
@@ -180,16 +136,16 @@ const Hero: FC<IHero> = ({
 							viewport={{once: true}}
 							initial={slideInRightInitial}
 							whileInView={slideInRightFinish}
-							className="ctaBanner w-full lg:w-fit lg:max-w-sm xl:max-w-xs py-3 px-4 lg:pb-10 xl:pb-16 lg:p-6 bg-tertiary-default text-left xl:text-center absolute right-0 top-0"
+							className="ctaBanner w-full lg:w-fit lg:max-w-sm xl:max-w-sm py-3 px-4 lg:p-6 bg-primary-three text-left xl:text-center absolute right-0 bottom-0"
 						>
 							<Link
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${ctaParagraph} Form button link`}
-								className="flex items-center justify-between gap-4 font-semibold font-Inter uppercase leading-tight text-white text-tiny md:text-base lg:text-medium"
+								className="flex items-center justify-between gap-4 font-normal font-aspektaMain uppercase leading-tight text-white text-tiny md:text-base lg:text-medium"
 							>
 								<span>{ctaParagraph}</span>
-								<span className="group xl:hidden flex items-center justify-end px-2 h-12 w-fit lg:h-16 rounded-full bg-tertiary-dark hover:bg-primary-default transition-all duration-200 ease-in-out">
+								<span className="group xl:hidden flex items-center justify-end px-2 h-12 w-fit lg:h-16 rounded-full bg-accent-two hover:bg-primary-darker transition-all duration-200 ease-in-out">
 									<svg
 										className="w-8 h-8 p-1 rotate-[-45deg] group-hover:rotate-[0deg] transition-all duration-200 ease-in-out"
 										xmlns="http://www.w3.org/2000/svg"
@@ -228,7 +184,7 @@ const Hero: FC<IHero> = ({
 								href={`${buttonLinkTwo?.url}`}
 								target={buttonLinkTwo?.target}
 								aria-label={`${buttonLinkTwo?.title}`}
-								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer bg-tertiary-dark hover:bg-primary-three transition-all ease-in-out duration-500 font-semibold uppercase text-white text-base text-center font-Inter`}
+								className={`hidden xl:flex w-fit mx-auto mt-2 py-4 px-6 cursor-pointer bg-accent-two hover:bg-primary-two transition-all ease-in-out duration-500 font-semibold uppercase text-white text-base text-center font-aspektaMain`}
 							>
 								{buttonLinkTwo?.title}
 							</Link>

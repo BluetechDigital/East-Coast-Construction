@@ -32,7 +32,7 @@ body::-webkit-scrollbar-thumb {
 
 	&:hover {
 		transition: all 0.5s;
-		background-color: $primaryLight;
+		background-color: $primary-light;
 	}
 }
 
@@ -97,7 +97,7 @@ h1 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $primaryDarker !important;
+	color: $primary-darker !important;
 }
 
 .swiper-button-next::after {
@@ -106,7 +106,7 @@ h1 {
 	height: 15px !important;
 	font-size: 15px !important;
 	font-weight: 900 !important;
-	color: $primaryDarker !important;
+	color: $primary-darker !important;
 }
 
 .gallerySlider {
