@@ -281,14 +281,6 @@ export type IOurServicesCard = {
 		title: string;
 		target: string;
 	};
-	icon: {
-		altText: string;
-		sourceUrl: string;
-		mediaDetails: {
-			width: number;
-			height: number;
-		};
-	};
 };
 export type IServicesGridCard = {
 	title: string;

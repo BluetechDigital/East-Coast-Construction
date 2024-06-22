@@ -26,7 +26,19 @@ const OurServices: FC<IOurServices> = ({
 }) => {
 	return (
 		<>
-			<div className={styles.ourServices + " py-12 px-4 bg-primary-darker"}>
+			<div
+				className={
+					styles.ourServices + " py-12 px-4 bg-center bg-no-repeat bg-cover"
+				}
+				style={{
+					backgroundImage: `linear-gradient(
+								0deg,
+								rgb(1, 1, 1, 0.25),
+								rgba(1, 1, 1, 0.25),
+								rgba(1, 1, 1, 0.25)
+							),url("/img/background/Cement-Floor-Background.jpg")`,
+				}}
+			>
 				<div className="container m-auto flex flex-col items-center gap-12 lg:gap-8">
 					<motion.div
 						initial={initial}
@@ -40,7 +52,7 @@ const OurServices: FC<IOurServices> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="font-aspektaMain uppercase text-center lg:text-left text-base text-accent-default"
+								className="font-aspektaMain uppercase text-center lg:text-left text-base text-white"
 							>
 								{subtitle}
 							</motion.h4>
@@ -83,7 +95,6 @@ const OurServices: FC<IOurServices> = ({
 										>
 											<OurServicesCard
 												link={item?.link}
-												icon={item?.icon}
 												title={item?.title}
 												paragraph={item?.paragraph}
 											/>
@@ -108,7 +119,6 @@ const OurServices: FC<IOurServices> = ({
 									>
 										<OurServicesCard
 											link={item?.link}
-											icon={item?.icon}
 											title={item?.title}
 											paragraph={item?.paragraph}
 										/>

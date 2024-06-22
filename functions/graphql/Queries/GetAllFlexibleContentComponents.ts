@@ -173,14 +173,6 @@ export const getAllFlexibleContentComponents = async (
 														title
 														target
 													}
-													icon {
-														altText
-														sourceUrl
-														mediaDetails {
-															height
-															width
-														}
-													}
 												}
 											}
 											... on ${postTypeFlexibleContent}_GallerySlider {
