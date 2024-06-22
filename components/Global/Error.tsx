@@ -24,7 +24,7 @@ const Error: FC = () => {
 		<section
 			className="relative h-[100vh] bg-cover bg-center bg-no-repeat flex flex-col justify-center items-center"
 			style={{
-				backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.15),rgba(0, 0, 0, 0.85)),url("${globalContext?.themesOptionsContent?.errorPageContent?.backgroundImage?.sourceUrl}")`,
+				backgroundImage: `linear-gradient(0deg,rgba(0, 0, 0, 0.10),rgba(0, 0, 0, 0.10)),url("${globalContext?.themesOptionsContent?.errorPageContent?.backgroundImage?.sourceUrl}")`,
 			}}
 		>
 			<div className="relative z-50 px-10 my-auto overflow-hidden py-44">
@@ -77,20 +77,11 @@ const Error: FC = () => {
 										: "hidden"
 								}
 							>
-								<div className="py-6 pl-4 pr-10 cursor-pointer bg-accent-two hover:bg-primary-default transition-all ease-in-out duration-500">
-									<span className="relative flex items-center justify-center pl-4 text-lightGrey text-tiny text-center">
-										{
-											globalContext?.themesOptionsContent?.errorPageContent
-												?.buttonLink?.title
-										}
-										<Image
-											width={550}
-											height={550}
-											alt="Black Arrow Icon"
-											src="/svg/navigation-menu-dropdown-arrow-white.svg"
-											className="my-auto ml-2 absolute top-[-25px] right-[-40px] rotate-[-135deg] cursor-pointer w-[35px] h-[35px] object-contain object-center"
-										/>
-									</span>
+								<div className="bg-accent-default hover:bg-primary-three py-4 px-10 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-left text-lg">
+									{
+										globalContext?.themesOptionsContent?.errorPageContent
+											?.buttonLink?.title
+									}
 								</div>
 							</Link>
 						</motion.button>

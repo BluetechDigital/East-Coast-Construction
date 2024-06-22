@@ -28,7 +28,7 @@ const HeroCard: FC<IHeroCard> = ({text, buttonLink, backgroundImage}) => {
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-left text-primary-default uppercase font-aspektaMain text-paragraph"
+							className="text-left text-primary-default uppercase font-aspektaMain text-lg"
 						>
 							{text}
 						</motion.h3>

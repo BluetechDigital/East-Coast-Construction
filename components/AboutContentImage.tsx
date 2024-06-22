@@ -95,7 +95,7 @@ const AboutContentImage: FC<IAboutContentImage> = ({
 						/>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="text-paragraph text-black text-center lg:text-left"
+							tailwindStyling="text-lg text-black text-center lg:text-left leading-relaxed"
 						/>
 						<motion.div
 							viewport={{once: true}}
@@ -109,7 +109,7 @@ const AboutContentImage: FC<IAboutContentImage> = ({
 								aria-label={`${buttonLink?.title}`}
 								className="group mt-4 lg:mt-2"
 							>
-								<div className="bg-accent-default group-hover:bg-primary-default p-4 lg:px-6 flex justify-between gap-6 h-full transition-all duration-500 ease-in-out font-aspektaMain uppercase text-white font-extrabold uppercase text-left text-paragraph">
+								<div className="bg-accent-default group-hover:bg-primary-default p-4 lg:px-6 flex justify-between gap-6 h-full transition-all duration-500 ease-in-out font-aspektaMain uppercase text-white font-extrabold uppercase text-left text-lg">
 									{buttonLink?.title}
 								</div>
 							</Link>

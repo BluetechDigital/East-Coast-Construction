@@ -38,7 +38,7 @@ const TitleContentImageCard: FC<ITitleContentImageCard> = ({
 					viewport={{once: true}}
 					className={
 						textTitle
-							? "lg:max-w-xl mb-2 font-semibold text-center lg:text-left text-black text-medium"
+							? "font-aspektaMain lg:max-w-xl mb-2 font-semibold leading-relaxed text-center lg:text-left text-black text-lg"
 							: "hidden"
 					}
 				>
@@ -46,7 +46,7 @@ const TitleContentImageCard: FC<ITitleContentImageCard> = ({
 				</motion.h3>
 				<Paragraph
 					content={paragraph}
-					tailwindStyling={`lg:max-w-xl leading-[1.5rem] text-base text-center lg:text-left ${paragraphColor}`}
+					tailwindStyling={`lg:max-w-xl leading-relaxed text-lg text-center lg:text-left ${paragraphColor}`}
 				/>
 				<div
 					className={
@@ -89,7 +89,7 @@ const TitleContentImageCard: FC<ITitleContentImageCard> = ({
 											</svg>
 										</span>
 										<span>
-											<h4 className=" text-left text-black text-base">
+											<h4 className=" text-left text-black text-lg">
 												{item?.points}
 											</h4>
 										</span>

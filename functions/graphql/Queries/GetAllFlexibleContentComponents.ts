@@ -274,6 +274,144 @@ export const getAllFlexibleContentComponents = async (
 													target
 												}
 											}
+											... on ${postTypeFlexibleContent}_TitleContentImage {
+            									fieldGroupName
+            									title
+            									textTitle
+            									subtitle
+            									paragraph
+            									image {
+            										altText
+            										sourceUrl
+            										mediaDetails {
+            											height
+            											width
+            										}
+            									}
+            									buttonLink {
+            										url
+            										title
+            										target
+            									}
+            									bulletPoints {
+            										points
+            									}
+            									displaySection
+            									displayContentOption
+            									displayImageClipPath
+            									displayParagraphColor
+            									displayBackgroundColor
+            								}
+											... on ${postTypeFlexibleContent}_TeamMembers {
+            									fieldGroupName
+            									displaySection
+            									title
+            									paragraph
+            									teamMembersGrid {
+            										name
+            										position
+            										facebookLink {
+            											url
+            											title
+            											target
+            										}
+            										twitterLink {
+            											url
+            											title
+            											target
+            										}
+            										instagramLink {
+            											url
+            											title
+            											target
+            										}
+            										linkedinLink {
+            											url
+            											title
+            											target
+            										}
+            										image {
+            											altText
+            											sourceUrl
+            											mediaDetails {
+            											  	height
+            											  	width
+            											}
+            										}
+            									}
+            								}
+            								... on ${postTypeFlexibleContent}_ExecutiveLeadershipsTeam {
+            									fieldGroupName
+            									displaySection
+            									title
+            									paragraph
+            									leadershipTeamGrid {
+            										name
+            										position
+            										facebookLink {
+            											url
+            											title
+            											target
+            										}
+            										twitterLink {
+            											url
+            											title
+            											target
+            										}
+            										instagramLink {
+            											url
+            											title
+            											target
+            										}
+            										linkedinLink {
+            											url
+            											title
+            											target
+            										}
+            										image {
+            											altText
+            											sourceUrl
+            											mediaDetails {
+            												height
+            												width
+            											}
+            										}
+            									}
+            								}
+											... on ${postTypeFlexibleContent}_OurClients {
+            									fieldGroupName
+            									displaySection
+            									title
+            									clientsGrid {
+            										image {
+            											altText
+            											sourceUrl
+            											mediaDetails {
+            											  	height
+            											  	width
+            											}
+            										}
+            									}
+            								}
+											... on ${postTypeFlexibleContent}_FeaturedProjects {
+            									fieldGroupName
+            									displaySection
+            									title
+            									subtitle
+            									buttonLink {
+            										url
+            										title
+            										target
+            									}
+            									lastSlideImage {
+            										altText
+            										sourceUrl
+            										mediaDetails {
+            											height
+            											width
+            										}
+            									}
+            								}
 										}
 									}
 								}

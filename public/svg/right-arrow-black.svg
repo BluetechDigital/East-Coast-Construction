@@ -17,7 +17,7 @@
 </g>
 </g>
 <g transform="matrix(90 0 0 90 540 540)"  >
-<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(0,22,64); fill-rule: nonzero; opacity: 1;"  transform=" translate(-6, -8)" d="M 3.25 0 L 0.75 2.5 L 6.25 8 L 0.75 13.5 L 3.25 16 L 11.25 8 L 3.25 0 Z" stroke-linecap="round" />
+<path style="stroke: none; stroke-width: 1; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: #111; fill-rule: nonzero; opacity: 1;"  transform=" translate(-6, -8)" d="M 3.25 0 L 0.75 2.5 L 6.25 8 L 0.75 13.5 L 3.25 16 L 11.25 8 L 3.25 0 Z" stroke-linecap="round" />
 </g>
 <g transform="matrix(NaN NaN NaN NaN 0 0)"  >
 <g style=""   >

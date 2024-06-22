@@ -47,13 +47,17 @@ const Footer: FC = () => {
 							content={globalContext?.themesOptionsContent?.textarea}
 							tailwindStyling={
 								globalContext?.themesOptionsContent?.textarea
-									? "px-4 lg:px-0 max-w-full lg:max-w-md text-paragraph text-black text-center lg:text-left"
+									? "px-4 lg:px-0 max-w-full lg:max-w-md text-lg text-black text-center lg:text-left"
 									: "hidden"
 							}
 						/>
 						<div className="flex items-center justify-center mt-2 gap-4 text-center">
 							<Link
 								href={`${globalContext?.themesOptionsContent?.facebookLink?.url}`}
+								target={
+									globalContext?.themesOptionsContent?.facebookLink?.target
+								}
+								aria-label={`Facebook Social Media Link ${globalContext?.themesOptionsContent?.facebookLink?.title}`}
 								className={
 									globalContext?.themesOptionsContent?.facebookLink?.url
 										? "inline-block px-1 hover:opacity-70"
@@ -82,6 +86,10 @@ const Footer: FC = () => {
 							</Link>
 							<Link
 								href={`${globalContext?.themesOptionsContent?.twitterLink?.url}`}
+								target={
+									globalContext?.themesOptionsContent?.twitterLink?.target
+								}
+								aria-label={`Twitter Social Media Link ${globalContext?.themesOptionsContent?.twitterLink?.title}`}
 								className={
 									globalContext?.themesOptionsContent?.twitterLink?.url
 										? "inline-block px-1 hover:opacity-70"
@@ -89,27 +97,30 @@ const Footer: FC = () => {
 								}
 							>
 								<svg
-									height="100%"
+									xmlns="http://www.w3.org/2000/svg"
+									x="0px"
+									y="0px"
+									width="100"
+									height="100"
+									viewBox="0 0 50 50"
 									className="w-5 h-5"
 									style={{
-										fill: "#111",
+										fill: "#00007a",
 										fillRule: "evenodd",
 										clipRule: "evenodd",
 										strokeLinejoin: "round",
 										strokeMiterlimit: "2",
 									}}
-									version="1.1"
-									viewBox="0 0 512 512"
-									width="100%"
 								>
-									<path
-										d="M161.014,464.013c193.208,0 298.885,-160.071 298.885,-298.885c0,-4.546 0,-9.072 -0.307,-13.578c20.558,-14.871 38.305,-33.282 52.408,-54.374c-19.171,8.495 -39.51,14.065 -60.334,16.527c21.924,-13.124 38.343,-33.782 46.182,-58.102c-20.619,12.235 -43.18,20.859 -66.703,25.498c-19.862,-21.121 -47.602,-33.112 -76.593,-33.112c-57.682,0 -105.145,47.464 -105.145,105.144c0,8.002 0.914,15.979 2.722,23.773c-84.418,-4.231 -163.18,-44.161 -216.494,-109.752c-27.724,47.726 -13.379,109.576 32.522,140.226c-16.715,-0.495 -33.071,-5.005 -47.677,-13.148l0,1.331c0.014,49.814 35.447,93.111 84.275,102.974c-15.464,4.217 -31.693,4.833 -47.431,1.802c13.727,42.685 53.311,72.108 98.14,72.95c-37.19,29.227 -83.157,45.103 -130.458,45.056c-8.358,-0.016 -16.708,-0.522 -25.006,-1.516c48.034,30.825 103.94,47.18 161.014,47.104"
-										style={{fillRule: "nonzero"}}
-									/>
+									<path d="M 5.9199219 6 L 20.582031 27.375 L 6.2304688 44 L 9.4101562 44 L 21.986328 29.421875 L 31.986328 44 L 44 44 L 28.681641 21.669922 L 42.199219 6 L 39.029297 6 L 27.275391 19.617188 L 17.933594 6 L 5.9199219 6 z M 9.7167969 8 L 16.880859 8 L 40.203125 42 L 33.039062 42 L 9.7167969 8 z"></path>
 								</svg>
 							</Link>
 							<Link
 								href={`${globalContext?.themesOptionsContent?.instagramLink?.url}`}
+								target={
+									globalContext?.themesOptionsContent?.instagramLink?.target
+								}
+								aria-label={`Instagram Social Media Link ${globalContext?.themesOptionsContent?.instagramLink?.title}`}
 								className={
 									globalContext?.themesOptionsContent?.instagramLink?.url
 										? "inline-block px-1 hover:opacity-70"
@@ -150,6 +161,10 @@ const Footer: FC = () => {
 							</Link>
 							<Link
 								href={`${globalContext?.themesOptionsContent?.linkedinLink?.url}`}
+								target={
+									globalContext?.themesOptionsContent?.linkedinLink?.target
+								}
+								aria-label={`Linkedin Social Media Link ${globalContext?.themesOptionsContent?.linkedinLink?.title}`}
 								className={
 									globalContext?.themesOptionsContent?.linkedinLink?.url
 										? "inline-block px-1 hover:opacity-70"

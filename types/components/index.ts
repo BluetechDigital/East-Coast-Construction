@@ -41,6 +41,21 @@ export type IHeroTwo = {
 		};
 	};
 };
+export type IOurClients = {
+	title: string;
+	clientsGrid: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type IVideoBlock = {
 	title: string;
 	video: string;
@@ -75,6 +90,44 @@ export type IOurServices = {
 				target: string;
 			};
 			icon: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
+export type ITeamMembers = {
+	title: string;
+	paragraph: string;
+	teamMembersGrid: [
+		{
+			name: string;
+			position: string;
+			facebookLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			twitterLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			linkedinLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			instagramLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
 				altText: string;
 				sourceUrl: string;
 				mediaDetails: {
@@ -134,6 +187,24 @@ export type ITestimonialsGrid = {
 	title: string;
 	subtitle: string;
 	paragraph: string;
+};
+export type IFeaturedProjects = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	lastSlideImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 };
 export type ISkillsExperiences = {
 	title: string;
@@ -232,6 +303,34 @@ export type IContentSectorGrid = {
 		}
 	];
 };
+export type ITitleContentImage = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	textTitle: string;
+	displayContentOption: string;
+	displayParagraphColor: string;
+	displayBackgroundColor: string;
+	displayImageClipPath: boolean;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+	bulletPoints: [
+		{
+			points: string;
+		}
+	];
+};
 export type IRequestAppointmentForm = {
 	title: string;
 	subtitle: string;
@@ -241,6 +340,44 @@ export type IRequestAppointmentForm = {
 		title: string;
 		target: string;
 	};
+};
+export type IExecutiveLeadershipsTeam = {
+	title: string;
+	paragraph: string;
+	leadershipTeamGrid: [
+		{
+			name: string;
+			position: string;
+			facebookLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			twitterLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			linkedinLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			instagramLink: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
 };
 
 // Global
@@ -271,10 +408,26 @@ export type IHeroCard = {
 export type ITeamMembersCard = {
 	name: string;
 	position: string;
-	facebookLink: string;
-	twitterLink: string;
-	linkedinLink: string;
-	instagramLink: string;
+	facebookLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	twitterLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	linkedinLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	instagramLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	image: {
 		altText: string;
 		sourceUrl: string;
@@ -340,6 +493,10 @@ export type ITestimonialsCard = {
 		};
 	};
 };
+export type IDevelopmentsImage = {
+	url: string;
+	alt: string;
+};
 export type IOurServicesCardTwo = {
 	title: string;
 	paragraph: string;
@@ -385,13 +542,34 @@ export type ITitleContentImageCard = {
 		}
 	];
 };
+export type IDevelopmentsSlideCard = {
+	link: string;
+	title: string;
+	backgroundImage: string;
+};
 export type IExecutiveLeadershipsTeamCard = {
 	name: string;
 	position: string;
-	facebookLink: string;
-	twitterLink: string;
-	linkedinLink: string;
-	instagramLink: string;
+	facebookLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	twitterLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	linkedinLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	instagramLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 	image: {
 		altText: string;
 		sourceUrl: string;

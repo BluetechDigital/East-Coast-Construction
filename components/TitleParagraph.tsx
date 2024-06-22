@@ -36,7 +36,7 @@ const TitleParagraph: FC<ITitleParagraph> = ({
 					content={paragraph}
 					tailwindStyling={
 						paragraph
-							? `mb-10 mx-auto text-black leading-[1.5rem] text-base text-center ${
+							? `mb-10 mx-auto text-black leading-relaxed text-base text-center ${
 									displayParagraph
 										? "lg:text-center lg:max-w-3xl"
 										: "lg:text-left lg:max-w-6xl"

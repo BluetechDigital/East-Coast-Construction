@@ -71,7 +71,7 @@ const DevelopmentsCard: FC<IDevelopmentsCard> = ({
 							initial={initial}
 							whileInView={fadeInUp}
 							viewport={{once: true}}
-							className="text-center lg:text-left text-black hover:text-primary-default uppercase font-aspektaMain text-paragraph my-3 font-semibold"
+							className="text-center lg:text-left text-black hover:text-primary-default uppercase font-aspektaMain text-lg my-3 font-semibold"
 						>
 							{title}
 						</motion.h3>

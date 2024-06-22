@@ -69,10 +69,10 @@ const Navbar: FC = () => {
 									: "hidden"
 							}
 						>
-							<div className="hidden md:flex items-center justify-center w-7 h-7 rounded-full bg-accent-default sm:mr-1">
+							<div className="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-accent-default sm:mr-1">
 								<svg
 									fill="#ffffff"
-									className="w-4 h-4"
+									className="w-6 h-6"
 									viewBox="0 0 100.354 100.354"
 									id="Layer_1"
 									version="1.1"
@@ -90,7 +90,7 @@ const Navbar: FC = () => {
 								</svg>
 							</div>
 							<Link
-								className="text-sm xl:text-tiny tracking-wide text-black hover:text-accent-two"
+								className="text-base tracking-wide text-black hover:text-accent-two"
 								href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 							>
 								{globalContext?.themesOptionsContent?.email}
@@ -103,12 +103,12 @@ const Navbar: FC = () => {
 									: "hidden"
 							}
 						>
-							<div className="hidden md:flex items-center justify-center w-7 h-7 rounded-full bg-accent-default sm:mr-1">
+							<div className="hidden md:flex items-center justify-center w-8 h-8 rounded-full bg-accent-default sm:mr-1">
 								<svg
 									fill="#ffffff"
 									viewBox="0 0 32 32"
 									version="1.1"
-									className="w-4 h-4"
+									className="w-5 h-5"
 									xmlns="http://www.w3.org/2000/svg"
 								>
 									<g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -123,10 +123,10 @@ const Navbar: FC = () => {
 								</svg>
 							</div>
 							<Link
-								className="text-sm tracking-wide text-black hover:text-accent-two"
+								className="text-base tracking-wide text-black hover:text-accent-two"
 								href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 							>
-								TEL: {globalContext?.themesOptionsContent?.phoneNumber}
+								{globalContext?.themesOptionsContent?.phoneNumber}
 							</Link>
 						</div>
 					</div>

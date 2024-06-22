@@ -60,13 +60,13 @@ const OurServices: FC<IOurServices> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 text-white uppercase font-aspektaMain leading-[2.25rem] text-center lg:text-left text-lg sm:text-3xl"
+								className="my-3 max-w-xl mx-auto lg:mx-0 text-white uppercase font-aspektaMain leading-relaxed text-center lg:text-left text-lg sm:text-3xl"
 							>
 								{title}
 							</motion.h3>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="max-w-full lg:max-w-lg text-white text-base text-center lg:text-left"
+								tailwindStyling="max-w-full lg:max-w-lg text-white text-lg text-center lg:text-left  leading-relaxed"
 							/>
 							<Link
 								href={`${buttonLink?.url}`}

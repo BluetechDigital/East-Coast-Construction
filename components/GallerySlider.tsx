@@ -67,7 +67,7 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 														</motion.h3>
 														<Paragraph
 															content={item?.paragraph}
-															tailwindStyling="py-2 text-white leading-[1.5rem] text-base text-center"
+															tailwindStyling="py-2 text-white leading-relaxed text-base text-center"
 														/>
 														<Link
 															href={`${item?.buttonLink?.url}`}
