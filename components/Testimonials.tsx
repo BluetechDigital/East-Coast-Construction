@@ -1,3 +1,5 @@
+"use client";
+
 // Imports
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
