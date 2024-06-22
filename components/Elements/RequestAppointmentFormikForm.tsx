@@ -218,7 +218,7 @@ const RequestAppointmentFormikForm = () => {
 									onBlur={formik?.handleBlur}
 									onChange={formik?.handleChange}
 									value={formik?.values?.fullName}
-									className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-primary-default active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
+									className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-white active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
 								/>
 							</motion.div>
 							<motion.div
@@ -237,12 +237,12 @@ const RequestAppointmentFormikForm = () => {
 								<Field
 									id="phoneNumber"
 									name="phoneNumber"
-									type="number"
+									type="text"
 									placeholder="Phone Number"
 									onBlur={formik?.handleBlur}
 									onChange={formik?.handleChange}
 									value={formik?.values?.phoneNumber}
-									className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-primary-default active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
+									className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-white active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
 								/>
 							</motion.div>
 						</div>
@@ -267,7 +267,7 @@ const RequestAppointmentFormikForm = () => {
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.subject}
-								className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-primary-default active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
+								className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-white active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
 							/>
 						</motion.div>
 						<motion.div
@@ -290,7 +290,7 @@ const RequestAppointmentFormikForm = () => {
 								onBlur={formik?.handleBlur}
 								onChange={formik?.handleChange}
 								value={formik?.values?.message}
-								className="p-4 w-full h-32 text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-primary-default active:border-primary-darker focus:border-primary-darker resize-none focus:ring-[1px] focus:ring-primary-darker"
+								className="p-4 w-full h-32 text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-white active:border-primary-darker focus:border-primary-darker resize-none focus:ring-[1px] focus:ring-primary-darker"
 							/>
 						</motion.div>
 						<motion.div
@@ -306,7 +306,7 @@ const RequestAppointmentFormikForm = () => {
 							}
 						>
 							<ReCAPTCHA
-								sitekey={`6LfF-pwpAAAAAGNKKz5Ae7Cbh18aLprnrq3r-ZEe`}
+								sitekey={`6LcWH_4pAAAAAGrGpWg6H4J6yXW3EdmRWUWTqQ_F`}
 								onChange={handleReCaptchaChange}
 							/>
 						</motion.div>
