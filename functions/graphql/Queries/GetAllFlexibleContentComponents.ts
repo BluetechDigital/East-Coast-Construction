@@ -239,6 +239,41 @@ export const getAllFlexibleContentComponents = async (
             										sourceUrl
               									}
 											}
+											... on ${postTypeFlexibleContent}_CtaTwo {
+												fieldGroupName
+												paragraph
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+											}
+											... on ${postTypeFlexibleContent}_Testimonials {
+												fieldGroupName
+												title
+												subtitle
+												displaySection
+											}
+											... on ${postTypeFlexibleContent}_TestimonialsGrid {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												displaySection
+											}
+											... on ${postTypeFlexibleContent}_RequestAppointmentForm {
+												fieldGroupName
+												title
+												subtitle
+												paragraph
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+											}
 										}
 									}
 								}

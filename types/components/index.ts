@@ -21,6 +21,14 @@ export type IHero = {
 		};
 	};
 };
+export type ICTATwo = {
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
 export type IHeroTwo = {
 	title: string;
 	paragraph: string;
@@ -77,6 +85,10 @@ export type IOurServices = {
 		}
 	];
 };
+export type ITestimonials = {
+	title: string;
+	subtitle: string;
+};
 export type IGallerySlider = {
 	gallerySlider: [
 		{
@@ -117,6 +129,11 @@ export type ITitleParagraph = {
 	title: string;
 	paragraph: string;
 	displayParagraph: boolean;
+};
+export type ITestimonialsGrid = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
 };
 export type ISkillsExperiences = {
 	title: string;
@@ -214,6 +231,16 @@ export type IContentSectorGrid = {
 			};
 		}
 	];
+};
+export type IRequestAppointmentForm = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
 };
 
 // Global

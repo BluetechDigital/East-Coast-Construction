@@ -47,7 +47,7 @@ const Footer: FC = () => {
 							content={globalContext?.themesOptionsContent?.textarea}
 							tailwindStyling={
 								globalContext?.themesOptionsContent?.textarea
-									? "px-4 lg:px-0 max-w-full lg:max-w-sm text-tiny text-black text-center lg:text-left"
+									? "px-4 lg:px-0 max-w-full lg:max-w-md text-paragraph text-black text-center lg:text-left"
 									: "hidden"
 							}
 						/>
@@ -203,7 +203,7 @@ const Footer: FC = () => {
 												>
 													<Link
 														href={`${item?.node?.url}`}
-														className="text-black flex items-center justify-center transition-all duration-200 ease-in-out text-tiny hover:text-accent-two"
+														className="font-aspektaMain uppercase text-black flex items-center justify-center transition-all duration-200 ease-in-out text-base hover:text-accent-two"
 													>
 														<span>
 															<svg
@@ -495,7 +495,7 @@ const Footer: FC = () => {
 					</div>
 				</div>
 			</div>
-			<div className=" bg-primary-darker py-1 my-0">
+			<div className=" bg-primary-default py-1 my-0">
 				<div className="lg:container px-2 lg:px-4 mx-auto flex flex-col-reverse lg:flex-row items-center justify-between">
 					<motion.div
 						initial={initial}
@@ -529,7 +529,7 @@ const Footer: FC = () => {
 							</span>
 						</Link>
 					</motion.div>
-					<ul className="flex flex-col sm:flex-row w-auto gap-4 lg:gap-2 sm:gap-16 py-6 px-4 lg:p-6">
+					<ul className="flex flex-col sm:flex-row w-auto gap-4 lg:gap-2 sm:gap-20 py-6 px-4 lg:p-6">
 						{globalContext?.copyrightLinks?.length > 0 ? (
 							globalContext?.copyrightLinks?.map((item: any, keys: number) => (
 								<Fragment key={keys}>
