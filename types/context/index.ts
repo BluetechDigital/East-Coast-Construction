@@ -35,6 +35,7 @@ export type IContent = [
 export type IPostTypes = {
 	pages: string;
 	posts: string;
+	careers: string;
 	previewPage: string;
 	previewPost: string;
 	testimonials: string;

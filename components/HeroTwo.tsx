@@ -33,7 +33,7 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 							}")`,
 					}}
 				>
-					<div className="max-w-full lg:max-w-2xl mx-auto lg:mx-0 relative z-10 flex flex-col items-center lg:items-start px-6 md:px-24">
+					<div className="max-w-full lg:max-w-5xl mx-auto lg:mx-0 relative z-10 flex flex-col items-center lg:items-start px-6 md:px-24">
 						<motion.h1
 							initial={initialTwo}
 							whileInView={fadeIn}
@@ -44,7 +44,7 @@ const HeroTwo: FC<IHeroTwo> = ({title, paragraph, backgroundImage}) => {
 						</motion.h1>
 						<Paragraph
 							content={paragraph}
-							tailwindStyling="py-2 text-white leading-relaxed text-base text-center lg:text-left"
+							tailwindStyling="mt-2 text-white leading-relaxed text-lg text-center lg:text-left"
 						/>
 					</div>
 				</div>
