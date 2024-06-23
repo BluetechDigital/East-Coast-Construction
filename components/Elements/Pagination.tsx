@@ -66,12 +66,12 @@ const Pagination: FC<IPagination> = ({
 								{contentType === `Gallery` ? (
 									<>
 										<Image
-											alt={item?.altText}
-											src={item?.sourceUrl}
-											width={item?.mediaDetails?.width}
-											height={item?.mediaDetails?.height}
+											alt={item?.image?.altText}
+											src={item?.image?.sourceUrl}
+											width={item?.image?.mediaDetails?.width}
+											height={item?.image?.mediaDetails?.height}
 											className={
-												item?.sourceUrl
+												item?.image?.sourceUrl
 													? `block object-cover object-center w-full h-[150px] ${
 															itemsPerPage === 12
 																? "md:h-[250px]"

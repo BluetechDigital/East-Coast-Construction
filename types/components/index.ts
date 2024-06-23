@@ -41,6 +41,23 @@ export type IHeroTwo = {
 		};
 	};
 };
+export type IGallery = {
+	title: string;
+	paragraph: string;
+	itemsDisplayedPerPage: string;
+	gallery: [
+		{
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type IOurClients = {
 	title: string;
 	clientsGrid: [
@@ -546,6 +563,21 @@ export type IDevelopmentsSlideCard = {
 	link: string;
 	title: string;
 	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
+export type IFeaturedProjectsSlider = {
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	lastSlideImage: {
 		altText: string;
 		sourceUrl: string;
 		mediaDetails: {

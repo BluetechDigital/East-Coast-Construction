@@ -7,6 +7,7 @@ import {usePageContext} from "@/context/providers/PageContextProvider";
 // Components
 import Hero from "@/components/Hero";
 import CTATwo from "@/components/CTATwo";
+import Gallery from "@/components/Gallery";
 import HeroTwo from "@/components/HeroTwo";
 import VideoBlock from "@/components/VideoBlock";
 import OurClients from "@/components/OurClients";
@@ -34,8 +35,9 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_Hero`]: Hero,
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,
 		[`${FlexibleContent}_HeroTwo`]: HeroTwo,
-		[`${FlexibleContent}_OurClients`]: OurClients,
+		[`${FlexibleContent}_Gallery`]: Gallery,
 		[`${FlexibleContent}_VideoBlock`]: VideoBlock,
+		[`${FlexibleContent}_OurClients`]: OurClients,
 		[`${FlexibleContent}_TeamMembers`]: TeamMembers,
 		[`${FlexibleContent}_OurServices`]: OurServices,
 		[`${FlexibleContent}_Testimonials`]: Testimonials,

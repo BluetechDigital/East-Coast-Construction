@@ -77,7 +77,7 @@ const TitleContentImage: FC<ITitleContentImage> = ({
 					<div
 						className={`flex ${
 							displayContentOption == "Right" ? "flex-col-reverse" : "flex-col"
-						} gap-4 lg:gap-x-16 p-0 mx-auto items-center justify-center lg:flex-row`}
+						} gap-4 lg:gap-x-16 px-4 lg:px-0 mx-auto items-center justify-center lg:flex-row`}
 					>
 						<motion.div
 							viewport={{once: true}}

@@ -46,9 +46,9 @@ export const getAllFlexibleContentComponents = async (
 											}
 											... on ${postTypeFlexibleContent}_HeroTwo {
 												fieldGroupName
+												displaySection
 												title
 												paragraph
-												displaySection
 												backgroundImage {
 													altText
 													sourceUrl
@@ -60,9 +60,9 @@ export const getAllFlexibleContentComponents = async (
 											}
 											... on ${postTypeFlexibleContent}_TitleParagraph {
 												fieldGroupName
+												displaySection
 												title
 												paragraph
-												displaySection
 												displayParagraph
 											}
 											... on ${postTypeFlexibleContent}_AboutContentImage {
@@ -133,10 +133,10 @@ export const getAllFlexibleContentComponents = async (
             								}
 											... on ${postTypeFlexibleContent}_ContentSectorGrid {
 												fieldGroupName
+												displaySection
 												title
 												subtitle
 												paragraph
-												displaySection
 												sectorGrid {
 													title
 													link {
@@ -156,6 +156,7 @@ export const getAllFlexibleContentComponents = async (
 											}
 											... on ${postTypeFlexibleContent}_OurServices {
 												fieldGroupName
+												displaySection
 												title
 												subtitle
 												paragraph
@@ -164,7 +165,6 @@ export const getAllFlexibleContentComponents = async (
             										title
             										target
             									}
-												displaySection
 												servicesGrid {
 													title
 													paragraph
@@ -173,6 +173,23 @@ export const getAllFlexibleContentComponents = async (
 														title
 														target
 													}
+												}
+											}
+											... on ${postTypeFlexibleContent}_Gallery {
+												fieldGroupName
+												displaySection
+												title
+												paragraph
+												itemsDisplayedPerPage
+												gallery {
+													image {
+                										altText
+                										sourceUrl
+                										mediaDetails {
+                											height
+                											width
+                										}
+                									}
 												}
 											}
 											... on ${postTypeFlexibleContent}_GallerySlider {
@@ -199,9 +216,9 @@ export const getAllFlexibleContentComponents = async (
 											}
 											... on ${postTypeFlexibleContent}_SkillsExperiences {
             									fieldGroupName
+												displaySection
             									title
             									paragraph
-												displaySection
 												image {
 													altText
 													sourceUrl
@@ -224,12 +241,12 @@ export const getAllFlexibleContentComponents = async (
             								}
 											... on ${postTypeFlexibleContent}_VideoBlock {
 												fieldGroupName
+												displaySection
 												title
 												video
 												subtitle
 												paragraph
 												displayVideo
-												displaySection
 												buttonLink {
 													url
 													title
@@ -251,23 +268,23 @@ export const getAllFlexibleContentComponents = async (
 											}
 											... on ${postTypeFlexibleContent}_Testimonials {
 												fieldGroupName
+												displaySection
 												title
 												subtitle
-												displaySection
 											}
 											... on ${postTypeFlexibleContent}_TestimonialsGrid {
 												fieldGroupName
+												displaySection
 												title
 												subtitle
 												paragraph
-												displaySection
 											}
 											... on ${postTypeFlexibleContent}_RequestAppointmentForm {
 												fieldGroupName
+												displaySection
 												title
 												subtitle
 												paragraph
-												displaySection
 												buttonLink {
 													url
 													title
@@ -276,6 +293,7 @@ export const getAllFlexibleContentComponents = async (
 											}
 											... on ${postTypeFlexibleContent}_TitleContentImage {
             									fieldGroupName
+												displaySection
             									title
             									textTitle
             									subtitle
@@ -296,7 +314,6 @@ export const getAllFlexibleContentComponents = async (
             									bulletPoints {
             										points
             									}
-            									displaySection
             									displayContentOption
             									displayImageClipPath
             									displayParagraphColor

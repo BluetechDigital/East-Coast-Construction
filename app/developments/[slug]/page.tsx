@@ -13,7 +13,7 @@ import RenderFlexibleContent from "@/components/FlexibleContent/RenderFlexibleCo
 
 // Dynamic Pages Generated Metadata
 export async function generateMetadata({params}: any): Promise<Metadata> {
-	const seo: any = await getAllSeoContent(params?.slug, postType?.pages);
+	const seo: any = await getAllSeoContent(params?.slug, postType?.developments);
 
 	return {
 		title: seo?.title,
@@ -25,7 +25,7 @@ const dynamicPages: NextPage = async ({params}: any) => {
 	// Fetch priority content
 	const flexibleContentComponents: any = await getAllFlexibleContentComponents(
 		params?.slug,
-		postType?.pages,
+		postType?.developments,
 		flexibleContentType?.pages
 	);
 

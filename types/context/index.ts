@@ -38,7 +38,7 @@ export type IPostTypes = {
 	previewPage: string;
 	previewPost: string;
 	testimonials: string;
-	Developments: string;
+	developments: string;
 };
 export type IDevelopments = [
 	{
