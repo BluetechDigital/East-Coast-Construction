@@ -545,7 +545,14 @@ export type ITitleContentImageCard = {
 export type IDevelopmentsSlideCard = {
 	link: string;
 	title: string;
-	backgroundImage: string;
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
 };
 export type IExecutiveLeadershipsTeamCard = {
 	name: string;

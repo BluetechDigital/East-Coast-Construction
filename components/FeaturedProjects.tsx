@@ -70,7 +70,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 						variants={stagger}
 						whileInView="animate"
 						viewport={{once: true}}
-						className="flex flex-col sm:flex-row gap-4 items-center lg:items-end justify-between py-8 px-4"
+						className="flex flex-col lg:flex-row gap-4 items-center lg:items-end justify-between py-8 px-4"
 					>
 						<div>
 							<motion.h4
@@ -85,7 +85,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 								initial={initial}
 								whileInView={fadeInUp}
 								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-aspektaMain leading-relaxed text-center lg:text-left text-lg sm:text-3xl"
+								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-aspektaMain leading-relaxed text-center lg:text-left text-lg sm:text-xl lg:text-4xl"
 							>
 								{title}
 							</motion.h3>
@@ -130,7 +130,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 										transition={{duration: 0.5, type: "spring"}}
 										className="flex flex-row py-12 items-center"
 									>
-										{/* {globalContext?.developments?.length > 0 ? (
+										{globalContext?.developments?.length > 0 ? (
 											globalContext?.developments?.map(
 												(item: any, keys: number) => (
 													<Fragment key={keys}>
@@ -148,10 +148,10 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 															}`}
 														>
 															<DevelopmentsSlideCard
-																link={item?.node?.uri}
 																title={item?.node?.title}
+																link={`/developments/${item?.node?.slug}`}
 																backgroundImage={
-																	item?.node?.featuredImage?.node?.sourceUrl
+																	item?.node?.featuredImage?.node
 																}
 															/>
 														</motion.div>
@@ -160,7 +160,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 											)
 										) : (
 											<></>
-										)} */}
+										)}
 										{/* Last Slide */}
 										<div
 											ref={largeSlideRef}
@@ -169,7 +169,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 											<DevelopmentsSlideCard
 												link={buttonLink?.url}
 												title={buttonLink?.title}
-												backgroundImage={lastSlideImage?.sourceUrl}
+												backgroundImage={lastSlideImage}
 											/>
 										</div>
 									</motion.div>

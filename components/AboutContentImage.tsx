@@ -91,7 +91,7 @@ const AboutContentImage: FC<IAboutContentImage> = ({
 					<div className="w-full lg:w-[85%] flex flex-col gap-8">
 						<Title
 							content={title}
-							tailwindStyling="title leading-snug lg:leading-[2.5rem] uppercase font-aspektaMain text-black text-center lg:text-left font-semibold text-lg sm:text-xl lg:text-4xl"
+							tailwindStyling="title leading-snug lg:leading-tight uppercase font-aspektaMain text-black text-center lg:text-left font-semibold text-lg sm:text-xl lg:text-4xl"
 						/>
 						<Paragraph
 							content={paragraph}

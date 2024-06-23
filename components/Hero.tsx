@@ -31,7 +31,7 @@ const Hero: FC<IHero> = ({
 			<div className={styles.hero + " hero relative z-50 flex flex-col h-fit"}>
 				<div className="lg:relative pt-[65px] md:pt-[112px] lg:pt-[112px] flex flex-col lg:flex-row">
 					<div
-						className="w-full h-screen sm:h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
+						className="w-full h-screen lg:h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `linear-gradient(
 								180deg,
@@ -64,7 +64,7 @@ const Hero: FC<IHero> = ({
 								initial={initialTwo}
 								whileInView={fadeIn}
 								viewport={{once: true}}
-								className="flex flex-col md:flex-row gap-2 sm:gap-4 max-w-sm lg:max-w-4xl mx-auto lg:mx-0"
+								className="hidden lg:flex flex-col md:flex-row gap-2 sm:gap-4 max-w-sm lg:max-w-4xl mx-auto lg:mx-0"
 							>
 								<Link
 									href={`${buttonLink?.url}`}
@@ -82,14 +82,14 @@ const Hero: FC<IHero> = ({
 							viewport={{once: true}}
 							initial={slideInRightInitial}
 							whileInView={slideInRightFinish}
-							className="ctaBanner w-full lg:w-fit lg:max-w-sm xl:max-w-sm absolute right-0 bottom-0 flex flex-col gap-4"
+							className="ctaBanner w-full lg:w-fit lg:max-w-sm xl:max-w-sm absolute right-0 bottom-0 flex flex-col lg:gap-4"
 						>
 							<motion.div
 								initial={initial}
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="w-full py-3 px-4 bg-lightGreyTwo/30 grid sm:grid-cols-2 items-center justify-center lg:justify-start gap-6"
+								className="w-full py-3 px-4 bg-lightGreyTwo/10 grid sm:grid-cols-2 items-center justify-center lg:justify-start gap-6"
 							>
 								<div className="flex items-center justify-center lg:justify-start gap-3">
 									<Image
@@ -125,6 +125,23 @@ const Hero: FC<IHero> = ({
 										</h3>
 									</div>
 								</div>
+							</motion.div>
+							<motion.div
+								initial={initialTwo}
+								whileInView={fadeIn}
+								viewport={{once: true}}
+								className="block lg:hidden"
+							>
+								<Link
+									href={`${buttonLink?.url}`}
+									target={buttonLink?.target}
+									aria-label={`${buttonLink?.title}`}
+									className={buttonLink?.url ? "w-full" : "hidden"}
+								>
+									<div className="w-full bg-accent-default hover:bg-accent-three p-4 lg:px-6 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-center text-lg">
+										{buttonLink?.title}
+									</div>
+								</Link>
 							</motion.div>
 							<div className="py-3 px-4 lg:p-6 bg-primary-three text-left xl:text-center">
 								<Link

@@ -18,11 +18,11 @@ const DevelopmentsSlideCard: FC<IDevelopmentsSlideCard> = ({
 					style={{
 						backgroundImage: `linear-gradient(
 							0deg,
-							rgba(0, 0, 0, 0.95),
 							rgba(0, 0, 0, 0.80),
-							rgba(0, 0, 0, 0.55),
-							rgba(0, 0, 0, 0.30)
-						),url("${backgroundImage}")`,
+							rgba(0, 0, 0, 0.20),
+							rgba(0, 0, 0, 0.20),
+							rgba(0, 0, 0, 0.10)
+						),url("${backgroundImage?.sourceUrl}")`,
 					}}
 				>
 					<motion.h2
