@@ -22,7 +22,7 @@ const ContentSectorGrid: FC<IContentSectorGrid> = ({
 	return (
 		<>
 			<div
-				className="py-12 px-4 bg-white bg-center bg-no-repeat bg-cover"
+				className="py-12 px-4 bg-white bg-center bg-no-repeat bg-cover border-t-8 border-solid border-accent-default"
 				style={{
 					backgroundImage: `linear-gradient(
 								0deg,

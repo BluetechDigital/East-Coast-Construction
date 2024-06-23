@@ -280,122 +280,118 @@ const Navbar: FC = () => {
 						</Link>
 					</div>
 					<div className="w-full lg:w-full xl:w-[65%] flex justify-end gap-8 px-4 2xl:gap-12 xl:gap-24">
-						<div className="hidden lg:flex items-center justify-end">
-							<div className="hidden lg:flex items-center gap-8">
-								<ul className="flex lg:items-center">
-									{globalContext?.navbarMenuLinks?.length > 0 ? (
-										globalContext?.navbarMenuLinks?.map(
-											(item: any, keys: number) => (
-												<Fragment key={keys}>
-													{item?.node?.url === "/services" ? (
-														<motion.li
-															custom={keys}
-															initial={initial}
-															whileInView="animate"
-															viewport={{once: true}}
-															variants={arrayLoopStaggerChildren}
-															className="relative group py-0 px-2"
+						<ul className="hidden lg:flex lg:items-center">
+							{globalContext?.navbarMenuLinks?.length > 0 ? (
+								globalContext?.navbarMenuLinks?.map(
+									(item: any, keys: number) => (
+										<Fragment key={keys}>
+											{item?.node?.url === "/services" ? (
+												<motion.li
+													custom={keys}
+													initial={initial}
+													whileInView="animate"
+													viewport={{once: true}}
+													variants={arrayLoopStaggerChildren}
+													className="relative group py-0 px-2"
+												>
+													<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+														<Link
+															href={`${item?.node?.url}`}
+															target={item?.node?.target}
+															onClick={resetNavbarStyling}
 														>
-															<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
-																<Link
-																	href={`${item?.node?.url}`}
-																	target={item?.node?.target}
-																	onClick={resetNavbarStyling}
-																>
-																	<span className="text-black uppercase font-aspektaMain group-hover:text-primary-three text-tiny text-center">
-																		{item?.node?.label}
-																	</span>
-																</Link>
-																<Image
-																	width={550}
-																	height={550}
-																	alt="Black Arrow Icon"
-																	onClick={displayOurServicesSublinks}
-																	src="/svg/navigation-menu-dropdown-arrow-black.svg"
-																	className={`${
-																		ourServicesSublinksOpen
-																			? "rotate-180"
-																			: "rotate-0"
-																	} cursor-pointer w-[22px] h-[22px] object-contain object-center`}
-																/>
-															</div>
-															{ourServicesSublinksOpen ? (
-																<>
-																	<div
-																		onMouseLeave={resetNavbarStyling}
-																		onMouseEnter={displayNavBackgroundColor}
-																	>
-																		<div className="fixed mt-[1.25rem] w-full mx-auto left-0 bg-white flex flex-col items-center justify-center">
-																			<ul
-																				className={
-																					styles.aboutUsSublinks +
-																					" px-28 py-6 w-full grid grid-cols-4 gap-4 border-b-8 border-solid border-primary-three z-[999]"
-																				}
-																			>
-																				{globalContext?.servicesSublinks
-																					?.length > 0 ? (
-																					globalContext?.servicesSublinks?.map(
-																						(item: any, keys: number) => (
-																							<Fragment key={keys}>
-																								<motion.li
-																									custom={keys}
-																									initial={initial}
-																									whileInView="animate"
-																									viewport={{once: true}}
-																									variants={
-																										arrayLoopStaggerChildren
-																									}
-																								>
-																									<Link
-																										href={`${item?.node?.url}`}
-																										className={` ${
-																											ourServicesSublinksOpen
-																												? "w-full hover:bg-primary-three text-center text-black hover:text-white"
-																												: "text-black"
-																										} block p-4 text-tiny uppercase font-aspektaMain`}
-																									>
-																										{item?.node?.label}
-																									</Link>
-																								</motion.li>
-																							</Fragment>
-																						)
-																					)
-																				) : (
-																					<></>
-																				)}
-																			</ul>
-																		</div>
-																	</div>
-																</>
-															) : null}
-														</motion.li>
-													) : (
-														<motion.li
-															custom={keys}
-															initial={initial}
-															whileInView="animate"
-															viewport={{once: true}}
-															variants={arrayLoopStaggerChildren}
-														>
-															<Link
-																href={`${item?.node?.url}`}
-																target={item?.node?.target}
+															<span className="text-black uppercase font-aspektaMain group-hover:text-primary-three text-tiny text-center">
+																{item?.node?.label}
+															</span>
+														</Link>
+														<Image
+															width={550}
+															height={550}
+															alt="Black Arrow Icon"
+															onClick={displayOurServicesSublinks}
+															src="/svg/navigation-menu-dropdown-arrow-black.svg"
+															className={`${
+																ourServicesSublinksOpen
+																	? "rotate-180"
+																	: "rotate-0"
+															} cursor-pointer w-[22px] h-[22px] object-contain object-center`}
+														/>
+													</div>
+													{ourServicesSublinksOpen ? (
+														<>
+															<div
+																onMouseLeave={resetNavbarStyling}
+																onMouseEnter={displayNavBackgroundColor}
 															>
-																<span className="py-0 px-2 text-black uppercase font-aspektaMain hover:text-primary-three text-tiny text-center">
-																	{item?.node?.label}
-																</span>
-															</Link>
-														</motion.li>
-													)}
-												</Fragment>
-											)
-										)
-									) : (
-										<></>
-									)}
-								</ul>
-							</div>
-						</div>
+																<div className="fixed mt-[1.25rem] w-full mx-auto left-0 bg-white flex flex-col items-center justify-center">
+																	<ul
+																		className={
+																			styles.aboutUsSublinks +
+																			" px-28 py-6 w-full grid lg:grid-cols-4 xl:grid-cols-5 gap-4 border-b-8 border-solid border-primary-three z-[999]"
+																		}
+																	>
+																		{globalContext?.servicesSublinks?.length >
+																		0 ? (
+																			globalContext?.servicesSublinks?.map(
+																				(item: any, keys: number) => (
+																					<Fragment key={keys}>
+																						<motion.li
+																							custom={keys}
+																							initial={initial}
+																							whileInView="animate"
+																							viewport={{once: true}}
+																							variants={
+																								arrayLoopStaggerChildren
+																							}
+																						>
+																							<Link
+																								href={`${item?.node?.url}`}
+																								className={` ${
+																									ourServicesSublinksOpen
+																										? "w-full bg-lightGreyTwo hover:bg-primary-three text-center text-black hover:text-white"
+																										: "text-black"
+																								} block p-4 text-tiny uppercase font-aspektaMain`}
+																							>
+																								{item?.node?.label}
+																							</Link>
+																						</motion.li>
+																					</Fragment>
+																				)
+																			)
+																		) : (
+																			<></>
+																		)}
+																	</ul>
+																</div>
+															</div>
+														</>
+													) : null}
+												</motion.li>
+											) : (
+												<motion.li
+													custom={keys}
+													initial={initial}
+													whileInView="animate"
+													viewport={{once: true}}
+													variants={arrayLoopStaggerChildren}
+												>
+													<Link
+														href={`${item?.node?.url}`}
+														target={item?.node?.target}
+													>
+														<span className="py-0 px-2 text-black uppercase font-aspektaMain hover:text-primary-three text-tiny text-center">
+															{item?.node?.label}
+														</span>
+													</Link>
+												</motion.li>
+											)}
+										</Fragment>
+									)
+								)
+							) : (
+								<></>
+							)}
+						</ul>
 					</div>
 					<div
 						className="w-[5rem] hidden lg:block bg-accent-default"
