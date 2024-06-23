@@ -101,11 +101,11 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 							</div>
 						</Link>
 					</motion.div>
-					<LazyMotion features={domMax}>
+					{/* <LazyMotion features={domMax}>
 						<div className="overflow-hidden px-4 lg:px-0">
 							<div className="pl-3/20">
 								<div className="relative">
-									{/* Prev */}
+									Prev
 									<motion.button
 										initial={{opacity: 0}}
 										animate={{opacity: 1}}
@@ -161,7 +161,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 										) : (
 											<></>
 										)}
-										{/* Last Slide */}
+										Last Slide
 										<div
 											ref={largeSlideRef}
 											className="flex-shrink-0 w-4/5 sm:w-2/3 pr-3 sm:pr-4 transition-opacity duration-200 ease-in-out opacity-100 hover:opacity-90"
@@ -173,7 +173,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 											/>
 										</div>
 									</motion.div>
-									{/* Next */}
+									Next
 									<motion.button
 										initial={{opacity: 0}}
 										animate={{opacity: 1}}
@@ -195,7 +195,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 								</div>
 							</div>
 						</div>
-					</LazyMotion>
+					</LazyMotion> */}
 				</div>
 			</div>
 		</>
