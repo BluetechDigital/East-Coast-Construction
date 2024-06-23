@@ -19,13 +19,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 			<div
 				className="py-16 px-4 flex flex-col gap-16 bg-white overflow-hidden bg-cover bg-no-repeat bg-center"
 				style={{
-					backgroundImage: `linear-gradient(
-									0deg,
-									rgba(255, 255, 255, 1),
-									rgba(255, 255, 255, 0.95),
-									rgba(255, 255, 255, 0.85),
-									rgba(255, 255, 255, 0.80)
-								),url("/svg/background/grid-background-12.svg")`,
+					backgroundImage: `linear-gradient(0deg,rgba(255, 255, 255, 0.90)),url("/svg/background/grid-background-12.svg")`,
 				}}
 			>
 				<div className="container mx-auto p-0">
