@@ -66,7 +66,7 @@ const OurServices: FC<IOurServices> = ({
 							</motion.h3>
 							<Paragraph
 								content={paragraph}
-								tailwindStyling="max-w-full lg:max-w-lg text-white text-lg text-center lg:text-left  leading-relaxed"
+								tailwindStyling="max-w-full lg:max-w-lg text-white text-lg text-center lg:text-left leading-relaxed"
 							/>
 							<Link
 								href={`${buttonLink?.url}`}

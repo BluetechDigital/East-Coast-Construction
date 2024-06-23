@@ -12,6 +12,7 @@ import HeroTwo from "@/components/HeroTwo";
 import VideoBlock from "@/components/VideoBlock";
 import OurClients from "@/components/OurClients";
 import TeamMembers from "@/components/TeamMembers";
+import ContactForm from "@/components/ContactForm";
 import OurServices from "@/components/OurServices";
 import Testimonials from "@/components/Testimonials";
 import GallerySlider from "@/components/GallerySlider";
@@ -39,6 +40,7 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_VideoBlock`]: VideoBlock,
 		[`${FlexibleContent}_OurClients`]: OurClients,
 		[`${FlexibleContent}_TeamMembers`]: TeamMembers,
+		[`${FlexibleContent}_ContactForm`]: ContactForm,
 		[`${FlexibleContent}_OurServices`]: OurServices,
 		[`${FlexibleContent}_Testimonials`]: Testimonials,
 		[`${FlexibleContent}_GallerySlider`]: GallerySlider,

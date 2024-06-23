@@ -155,6 +155,18 @@ export type ITeamMembers = {
 		}
 	];
 };
+export type IContactForm = {
+	title: string;
+	paragraph: string;
+	image: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
 export type ITestimonials = {
 	title: string;
 	subtitle: string;

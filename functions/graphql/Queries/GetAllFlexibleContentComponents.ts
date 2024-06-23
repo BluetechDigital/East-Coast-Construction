@@ -429,6 +429,20 @@ export const getAllFlexibleContentComponents = async (
             										}
             									}
             								}
+											... on ${postTypeFlexibleContent}_ContactForm {
+												fieldGroupName
+												displaySection
+												title
+												paragraph
+												image {
+            										altText
+            										sourceUrl
+            										mediaDetails {
+            											height
+            											width
+            										}
+            									}
+											}
 										}
 									}
 								}
