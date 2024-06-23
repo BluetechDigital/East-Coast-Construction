@@ -161,7 +161,7 @@ const FeaturedProjects: FC<IFeaturedProjects> = ({
 										) : (
 											<></>
 										)} */}
-										Last Slide
+										{/* Last Slide */}
 										<div
 											ref={largeSlideRef}
 											className="flex-shrink-0 w-4/5 sm:w-2/3 pr-3 sm:pr-4 transition-opacity duration-200 ease-in-out opacity-100 hover:opacity-90"
