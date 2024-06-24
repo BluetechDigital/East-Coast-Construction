@@ -15,7 +15,7 @@ const CareersGridCard: FC<ICareersGridCard> = ({
 	excerpt,
 }) => {
 	return (
-		<div className="flex flex-col items-center justify-center p-6 h-full min-h-[250px] bg-white border-2 border-pureBlack border-solid">
+		<div className="flex flex-col items-center lg:items-baseline justify-center p-6 w-full h-full min-h-[250px] bg-white border-2 border-pureBlack border-solid">
 			<motion.div
 				initial={initial}
 				variants={stagger}
@@ -41,14 +41,14 @@ const CareersGridCard: FC<ICareersGridCard> = ({
 						tailwindStyling="max-w-full max-w-sm mx-auto lg:mx-0 text-paragraph text-black text-center lg:text-left"
 					/>
 				</div>
-				<div className="">
+				<div>
 					<Link
 						target="_self"
 						href={`${slug}`}
 						className={`${slug ? "block mt-4" : "hidden"}`}
 					>
 						<div className="w-full mx-auto lg:mx-0 py-4 px-6 text-center cursor-pointer tracking-[0.10rem] text-white text-tiny md:text-base uppercase font-aspektaMain bg-accent-default hover:bg-accent-two transition-all ease-in-out duration-500">
-							View Job
+							View Job Details
 						</div>
 					</Link>
 				</div>

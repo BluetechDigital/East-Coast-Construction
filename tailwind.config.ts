@@ -52,7 +52,7 @@ const config: Config = {
 					two: "#800000",
 					three: "#a70101",
 					light: "#eb0000",
-					dark: "#a70107",
+					dark: "#470001",
 					darker: "#290001",
 				},
 				accent: {

@@ -85,9 +85,9 @@ const Pagination: FC<IPagination> = ({
 								) : contentType === `CareersGridCard` ? (
 									<>
 										<CareersGridCard
-											slug={item?.node?.slug}
 											title={item?.node?.title}
 											excerpt={item?.node?.excerpt}
+											slug={`careers/${item?.node?.slug}`}
 											featuredImage={item?.node?.featuredImage}
 										/>
 									</>

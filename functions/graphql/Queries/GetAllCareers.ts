@@ -70,3 +70,105 @@ export const getAllCareersContent = async () => {
 		);
 	}
 };
+
+/* JOBS POSITIONS TAXONOMIES (SLUGS & CONTENT) */
+
+// HEAD OFFICE TAXONOMY
+// All Head Office Taxonomy Jobs Positions Slugs
+export const getAllHeadOfficeTaxonomyContent = async () => {
+	try {
+		const content: DocumentNode = gql`
+			{
+				HeadOfficeTaxonomyContent: jobsPositions(where: {name: "Head Office"}) {
+					edges {
+						node {
+							careers(last: 100) {
+								edges {
+									node {
+										slug
+										title
+										excerpt
+										modified
+										featuredImage {
+											node {
+												altText
+												sourceUrl
+												mediaDetails {
+													height
+													width
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		`;
+
+		const response: any = await client.query({
+			query: content,
+		});
+
+		return response?.data?.HeadOfficeTaxonomyContent?.edges[0]?.node?.careers
+			?.edges;
+	} catch (error) {
+		console.log(error);
+		throw new Error(
+			"Something went wrong trying to fetch all jobs post for Head Office taxonomy"
+		);
+	}
+};
+
+// FIELD OPERATORS TAXONOMY
+// All Field Operators Taxonomy Jobs Positions Content
+export const getAllFieldOperatorsTaxonomyContent = async () => {
+	try {
+		const content: DocumentNode = gql`
+			{
+				fieldOperatorsTaxonomyContent: jobsPositions(
+					where: {name: "Field Operators"}
+				) {
+					edges {
+						node {
+							careers(last: 100) {
+								edges {
+									node {
+										slug
+										title
+										excerpt
+										modified
+										featuredImage {
+											node {
+												altText
+												sourceUrl
+												mediaDetails {
+													height
+													width
+												}
+											}
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		`;
+
+		const response: any = await client.query({
+			query: content,
+		});
+
+		return response?.data?.fieldOperatorsTaxonomyContent?.edges[0]?.node
+			?.careers?.edges;
+	} catch (error) {
+		console.log(error);
+		throw new Error(
+			"Something went wrong trying to fetch all jobs post for Field Operators taxonomy"
+		);
+	}
+};

@@ -15,7 +15,11 @@ import {
 	getFooterMenuLinks,
 	getOurServicesSublinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
-import {getAllCareersContent} from "@/functions/graphql/Queries/GetAllCareers";
+import {
+	getAllCareersContent,
+	getAllHeadOfficeTaxonomyContent,
+	getAllFieldOperatorsTaxonomyContent,
+} from "@/functions/graphql/Queries/GetAllCareers";
 import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
 import {getAllTestimonialsContent} from "@/functions/graphql/Queries/GetAllTestimonials";
 import {getAllDevelopmentsContent} from "@/functions/graphql/Queries/GetAllDevelopments";
@@ -41,8 +45,9 @@ const App = async ({children}: AppProps | any) => {
 		getAllDevelopmentsContent(),
 		getAllTestimonialsContent(),
 
-		// Football Fixtures
-		// getLastThreeFixturesContent(),
+		// Taxonomies Jobs Positions
+		getAllHeadOfficeTaxonomyContent(),
+		getAllFieldOperatorsTaxonomyContent(),
 	];
 
 	const [
@@ -56,15 +61,18 @@ const App = async ({children}: AppProps | any) => {
 		developments,
 		testimonials,
 
-		// Football Fixtures
-		// lastThreeFixtures,
+		// Taxonomies Jobs Positions
+		headOffice,
+		fieldOperators,
 	] = await Promise.all(promises);
 
 	const globalProps: IGlobalProps = {
 		careers: careers,
+		headOffice: headOffice,
 		mobileLinks: mobileLinks,
 		developments: developments,
 		testimonials: testimonials,
+		fieldOperators: fieldOperators,
 		copyrightLinks: copyrightLinks,
 		navbarMenuLinks: navbarMenuLinks,
 		footerMenuLinks: footerMenuLinks,

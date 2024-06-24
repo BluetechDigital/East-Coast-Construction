@@ -16,9 +16,9 @@ const Careers: FC<ICareers> = ({title, subtitle, paragraph}) => {
 				backgroundImage: `linear-gradient(
 					0deg,
 					rgba(255, 255, 255, 1),
-					rgba(255, 255, 255, 0.95),
-					rgba(255, 255, 255, 0.85),
-					rgba(255, 255, 255, 0.80)
+					rgba(255, 255, 255, 0.90),
+					rgba(255, 255, 255, 0.90),
+					rgba(255, 255, 255, 0.90)
 				),url("/svg/background/grid-background-06.svg")`,
 			}}
 		>

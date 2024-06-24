@@ -170,6 +170,29 @@ export namespace ILinks {
 	export interface IServicesSublinks extends INavbarMenuLinks {}
 }
 
+export namespace ITaxonomies {
+	export type IJobsPositions = {
+		node: {
+			slug: string;
+			title: string;
+			excerpt: string;
+			modified: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}[];
+
+	export interface IHeadOffice extends IJobsPositions {}
+	export interface IFieldOperators extends IJobsPositions {}
+}
 /* CONTEXT PROVIDERS  */
 export type IPageContext = {
 	content: IContent;
@@ -180,6 +203,10 @@ export type IGlobalProps = {
 	testimonials: ITestimonials;
 	developments: IDevelopments;
 	themesOptionsContent: IThemesOptionsContent;
+
+	// Taxonomies Jobs Positions
+	headOffice: ITaxonomies.IHeadOffice;
+	fieldOperators: ITaxonomies.IFieldOperators;
 
 	// Website Links
 	mobileLinks: ILinks.IMobileLinks;
@@ -193,6 +220,10 @@ export type IGlobalContext = {
 	developments: IDevelopments;
 	testimonials: ITestimonials;
 	themesOptionsContent: IThemesOptionsContent;
+
+	// Taxonomies Jobs Positions
+	headOffice: ITaxonomies.IHeadOffice;
+	fieldOperators: ITaxonomies.IFieldOperators;
 
 	// Website Links
 	mobileLinks: ILinks.IMobileLinks;
