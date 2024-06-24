@@ -32,11 +32,11 @@ const OurServices: FC<IOurServices> = ({
 				}
 				style={{
 					backgroundImage: `linear-gradient(
-								0deg,
-								rgb(1, 1, 1, 0.25),
-								rgba(1, 1, 1, 0.25),
-								rgba(1, 1, 1, 0.25)
-							),url("/img/background/Cement-Floor-Background.jpg")`,
+						0deg,
+						rgb(1, 1, 1, 0.25),
+						rgba(1, 1, 1, 0.25),
+						rgba(1, 1, 1, 0.25)
+					),url("/img/background/Cement-Floor-Background.jpg")`,
 				}}
 			>
 				<div className="container m-auto flex flex-col items-center gap-12 lg:gap-8">
@@ -74,11 +74,9 @@ const OurServices: FC<IOurServices> = ({
 								className={`${buttonLink?.url ? "block mt-4" : "hidden"}`}
 							>
 								<div
-									className={`w-fit mx-auto lg:mx-0 py-4 px-6 text-center cursor-pointer bg-accent-default hover:bg-accent-two transition-all ease-in-out duration-500`}
+									className={`w-fit mx-auto lg:mx-0 py-4 px-6 text-center cursor-pointer tracking-[0.10rem] text-white text-tiny md:text-base uppercase font-aspektaMain bg-accent-default hover:bg-accent-two transition-all ease-in-out duration-500`}
 								>
-									<h3 className="tracking-[0.10rem] text-white text-tiny md:text-base text-center uppercase font-aspektaMain">
-										{buttonLink?.title}
-									</h3>
+									{buttonLink?.title}
 								</div>
 							</Link>
 						</div>

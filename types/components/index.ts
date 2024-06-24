@@ -471,6 +471,28 @@ export type ITeamMembersCard = {
 		};
 	};
 };
+export type ICareersGridCard = {
+	slug: string;
+	title: string;
+	excerpt: string;
+	featuredImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
+export type IOurServicesCard = {
+	title: string;
+	paragraph: string;
+	link: {
+		url: string;
+		title: string;
+		target: string;
+	};
+};
 export type IDevelopmentsCard = {
 	slug: string;
 	date: string;
@@ -485,15 +507,6 @@ export type IDevelopmentsCard = {
 				height: number;
 			};
 		};
-	};
-};
-export type IOurServicesCard = {
-	title: string;
-	paragraph: string;
-	link: {
-		url: string;
-		title: string;
-		target: string;
 	};
 };
 export type IServicesGridCard = {

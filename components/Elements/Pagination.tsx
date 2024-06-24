@@ -15,9 +15,10 @@ import {FC, Fragment, useState} from "react";
 import {IPagination} from "@/types/components/index";
 
 // Components
-import Paragraph from "./Paragraph";
-import DevelopmentsCard from "../Cards/DevelopmentsCard";
-import TestimonialsCard from "../Cards/TestimonialsCard";
+import Paragraph from "@/components/Elements/Paragraph";
+import CareersGridCard from "@/components/Cards/CareersGridCard";
+import DevelopmentsCard from "@/components/Cards/DevelopmentsCard";
+import TestimonialsCard from "@/components/Cards/TestimonialsCard";
 
 const Pagination: FC<IPagination> = ({
 	contentType,
@@ -79,6 +80,15 @@ const Pagination: FC<IPagination> = ({
 													  }`
 													: `hidden`
 											}
+										/>
+									</>
+								) : contentType === `CareersGridCard` ? (
+									<>
+										<CareersGridCard
+											slug={item?.node?.slug}
+											title={item?.node?.title}
+											excerpt={item?.node?.excerpt}
+											featuredImage={item?.node?.featuredImage}
 										/>
 									</>
 								) : contentType === `TestimonialsCard` ? (

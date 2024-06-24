@@ -5,8 +5,8 @@ import {ICareers} from "@/types/components/index";
 import {fadeInUp, initial, stagger} from "@/animations/animations";
 
 // Components
-import CareersGrid from "./Elements/CareersGrid";
 import Paragraph from "@/components/Elements/Paragraph";
+import CareersGrid from "@/components/Elements/CareersGrid";
 
 const Careers: FC<ICareers> = ({title, subtitle, paragraph}) => {
 	return (

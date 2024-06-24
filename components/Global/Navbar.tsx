@@ -90,7 +90,7 @@ const Navbar: FC = () => {
 								</svg>
 							</div>
 							<Link
-								className="text-base tracking-wide text-black hover:text-accent-two"
+								className="text-sm md:text-base tracking-wide text-black hover:text-accent-two"
 								href={`mailto:${globalContext?.themesOptionsContent?.email}`}
 							>
 								{globalContext?.themesOptionsContent?.email}
@@ -123,7 +123,7 @@ const Navbar: FC = () => {
 								</svg>
 							</div>
 							<Link
-								className="text-base tracking-wide text-black hover:text-accent-two"
+								className="text-sm md:text-base tracking-wide text-black hover:text-accent-two"
 								href={`tel:${globalContext?.themesOptionsContent?.phoneNumber}`}
 							>
 								{globalContext?.themesOptionsContent?.phoneNumber}
