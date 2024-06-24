@@ -34,7 +34,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 						whileInView="animate"
 						viewport={{once: true}}
 						className={
-							title && subtitle && paragraph
+							displayVideo
 								? "flex flex-col lg:flex-row items-center justify-between gap-8 w-full"
 								: "hidden"
 						}
@@ -67,7 +67,7 @@ const VideoBlock: FC<IVideoBlock> = ({
 								target={buttonLink?.target}
 								className={`${buttonLink?.url ? "block" : "hidden"}`}
 							>
-								<div className="mt-4 lg:mt-2 w-fit mx-auto lg:mx-0 py-4 px-6 text-center cursor-pointer bg-primary-three hover:bg-primary-two transition-all ease-in-out duration-500 tracking-[0.10rem] text-white text-tiny md:text-base text-center uppercase font-aspektaMain">
+								<div className="mt-4 lg:mt-2 w-fit mx-auto lg:mx-0 py-4 px-6 cursor-pointer bg-primary-three hover:bg-primary-two transition-all ease-in-out duration-500 tracking-[0.10rem] text-white text-tiny md:text-base text-center uppercase font-aspektaMain">
 									{buttonLink?.title}
 								</div>
 							</Link>
