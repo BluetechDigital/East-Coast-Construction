@@ -443,6 +443,13 @@ export const getAllFlexibleContentComponents = async (
             										}
             									}
 											}
+											... on ${postTypeFlexibleContent}_Careers {
+												fieldGroupName
+												displaySection
+												title
+												subtitle
+												paragraph
+											}
 										}
 									}
 								}

@@ -18,6 +18,7 @@ const GlobalContextProvider: FC<IGlobalContextProvider> = ({
 	return (
 		<GlobalContext.Provider
 			value={{
+				careers: globalProps?.careers,
 				mobileLinks: globalProps?.mobileLinks,
 				testimonials: globalProps?.testimonials,
 				developments: globalProps?.developments,

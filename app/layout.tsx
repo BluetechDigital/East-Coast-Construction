@@ -15,6 +15,7 @@ import {
 	getFooterMenuLinks,
 	getOurServicesSublinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
+import {getAllCareersContent} from "@/functions/graphql/Queries/GetAllCareers";
 import {getThemesOptionsContent} from "@/functions/graphql/Queries/GetAllThemesOptions";
 import {getAllTestimonialsContent} from "@/functions/graphql/Queries/GetAllTestimonials";
 import {getAllDevelopmentsContent} from "@/functions/graphql/Queries/GetAllDevelopments";
@@ -29,16 +30,38 @@ const App = async ({children}: AppProps | any) => {
 	// PUBLIC PAGES //
 	/* Fetch all global content
 	remaining content simultaneously */
-	const mobileLinks: any = await getMobileLinks();
-	const copyrightLinks: any = await getCopyrightLinks();
-	const navbarMenuLinks: any = await getNavbarMenuLinks();
-	const footerMenuLinks: any = await getFooterMenuLinks();
-	const developments: any = await getAllDevelopmentsContent();
-	const testimonials: any = await getAllTestimonialsContent();
-	const servicesSublinks: any = await getOurServicesSublinks();
-	const themesOptionsContent: any = await getThemesOptionsContent();
+	const promises: Promise<any>[] = [
+		getMobileLinks(),
+		getCopyrightLinks(),
+		getNavbarMenuLinks(),
+		getFooterMenuLinks(),
+		getAllCareersContent(),
+		getOurServicesSublinks(),
+		getThemesOptionsContent(),
+		getAllDevelopmentsContent(),
+		getAllTestimonialsContent(),
+
+		// Football Fixtures
+		// getLastThreeFixturesContent(),
+	];
+
+	const [
+		mobileLinks,
+		copyrightLinks,
+		navbarMenuLinks,
+		footerMenuLinks,
+		careers,
+		servicesSublinks,
+		themesOptionsContent,
+		developments,
+		testimonials,
+
+		// Football Fixtures
+		// lastThreeFixtures,
+	] = await Promise.all(promises);
 
 	const globalProps: IGlobalProps = {
+		careers: careers,
 		mobileLinks: mobileLinks,
 		developments: developments,
 		testimonials: testimonials,

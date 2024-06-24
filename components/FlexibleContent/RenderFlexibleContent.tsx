@@ -9,6 +9,7 @@ import Hero from "@/components/Hero";
 import CTATwo from "@/components/CTATwo";
 import Gallery from "@/components/Gallery";
 import HeroTwo from "@/components/HeroTwo";
+import Careers from "@/components/Careers";
 import VideoBlock from "@/components/VideoBlock";
 import OurClients from "@/components/OurClients";
 import TeamMembers from "@/components/TeamMembers";
@@ -35,6 +36,7 @@ const RenderFlexibleContent: FC = () => {
 	const componentMap: any = {
 		[`${FlexibleContent}_Hero`]: Hero,
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,
+		[`${FlexibleContent}_Careers`]: Careers,
 		[`${FlexibleContent}_HeroTwo`]: HeroTwo,
 		[`${FlexibleContent}_Gallery`]: Gallery,
 		[`${FlexibleContent}_VideoBlock`]: VideoBlock,

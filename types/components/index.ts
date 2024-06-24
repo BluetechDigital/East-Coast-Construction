@@ -155,6 +155,11 @@ export type ITeamMembers = {
 		}
 	];
 };
+export type ICareers = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+};
 export type IContactForm = {
 	title: string;
 	paragraph: string;

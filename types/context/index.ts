@@ -32,6 +32,27 @@ export type IContent = [
 		content: any;
 	}
 ];
+export type ICareers = [
+	{
+		node: {
+			id: string;
+			slug: string;
+			date: string;
+			title: string;
+			excerpt: string;
+			featuredImage: {
+				node: {
+					altText: string;
+					sourceUrl: string;
+					mediaDetails: {
+						width: number;
+						height: number;
+					};
+				};
+			};
+		};
+	}
+];
 export type IPostTypes = {
 	pages: string;
 	posts: string;
@@ -155,6 +176,7 @@ export type IPageContext = {
 	postTypeFlexibleContent: string;
 };
 export type IGlobalProps = {
+	careers: ICareers;
 	testimonials: ITestimonials;
 	developments: IDevelopments;
 	themesOptionsContent: IThemesOptionsContent;
@@ -167,6 +189,7 @@ export type IGlobalProps = {
 	servicesSublinks: ILinks.IServicesSublinks;
 };
 export type IGlobalContext = {
+	careers: ICareers;
 	developments: IDevelopments;
 	testimonials: ITestimonials;
 	themesOptionsContent: IThemesOptionsContent;
