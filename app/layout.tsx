@@ -13,6 +13,7 @@ import {
 	getCopyrightLinks,
 	getNavbarMenuLinks,
 	getFooterMenuLinks,
+	getAboutUsSublinks,
 	getOurServicesSublinks,
 } from "@/functions/graphql/Queries/GetAllMenuLinks";
 import {
@@ -35,12 +36,7 @@ const App = async ({children}: AppProps | any) => {
 	/* Fetch all global content
 	remaining content simultaneously */
 	const promises: Promise<any>[] = [
-		getMobileLinks(),
-		getCopyrightLinks(),
-		getNavbarMenuLinks(),
-		getFooterMenuLinks(),
 		getAllCareersContent(),
-		getOurServicesSublinks(),
 		getThemesOptionsContent(),
 		getAllDevelopmentsContent(),
 		getAllTestimonialsContent(),
@@ -48,15 +44,18 @@ const App = async ({children}: AppProps | any) => {
 		// Taxonomies Jobs Positions
 		getAllHeadOfficeTaxonomyContent(),
 		getAllFieldOperatorsTaxonomyContent(),
+
+		// Website Links
+		getMobileLinks(),
+		getCopyrightLinks(),
+		getAboutUsSublinks(),
+		getNavbarMenuLinks(),
+		getFooterMenuLinks(),
+		getOurServicesSublinks(),
 	];
 
 	const [
-		mobileLinks,
-		copyrightLinks,
-		navbarMenuLinks,
-		footerMenuLinks,
 		careers,
-		servicesSublinks,
 		themesOptionsContent,
 		developments,
 		testimonials,
@@ -64,6 +63,14 @@ const App = async ({children}: AppProps | any) => {
 		// Taxonomies Jobs Positions
 		headOffice,
 		fieldOperators,
+
+		// Website Links
+		mobileLinks,
+		copyrightLinks,
+		aboutUsSublinks,
+		navbarMenuLinks,
+		footerMenuLinks,
+		servicesSublinks,
 	] = await Promise.all(promises);
 
 	const globalProps: IGlobalProps = {
@@ -74,6 +81,7 @@ const App = async ({children}: AppProps | any) => {
 		testimonials: testimonials,
 		fieldOperators: fieldOperators,
 		copyrightLinks: copyrightLinks,
+		aboutUsSublinks: aboutUsSublinks,
 		navbarMenuLinks: navbarMenuLinks,
 		footerMenuLinks: footerMenuLinks,
 		servicesSublinks: servicesSublinks,

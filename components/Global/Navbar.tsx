@@ -3,7 +3,6 @@
 // Imports
 import {
 	fadeIn,
-	stagger,
 	initial,
 	initialTwo,
 	arrayLoopStaggerChildren,
@@ -19,6 +18,7 @@ import styles from "@/styles/components/Navbar.module.scss";
 
 // Components
 import SideMenu from "@/components/Elements/SideMenu";
+import SubmenuLinks from "@/components/Elements/SubmenuLinks";
 import BookAppointment from "@/components/Elements/BookAppointment";
 import NoticeInfoBanner from "@/components/Elements/NoticeInfoBanner";
 
@@ -27,6 +27,7 @@ const Navbar: FC = () => {
 
 	// Display all sublinks & Mobile Links
 	const [menuActive, setMenuActive] = useState(false);
+	const [aboutUsSublinksOpen, setAboutUsSublinksOpen]: any = useState(false);
 	const [navBackgroundSublinksOpen, setNavBackgroundSublinksOpen]: any =
 		useState(false);
 	const [ourServicesSublinksOpen, setOurServicesSublinksOpen]: any =
@@ -43,8 +44,15 @@ const Navbar: FC = () => {
 		setNavBackgroundSublinksOpen(!navBackgroundSublinksOpen);
 	};
 
+	// Hides or Display About Us Sublinks
+	const displayAboutUsSublinks = () => {
+		setOurServicesSublinksOpen(false);
+		setAboutUsSublinksOpen(!aboutUsSublinksOpen);
+	};
+
 	// Hides or Display Our Services sublinks
 	const displayOurServicesSublinks = () => {
+		setAboutUsSublinksOpen(false);
 		setOurServicesSublinksOpen(!ourServicesSublinksOpen);
 	};
 
@@ -285,7 +293,50 @@ const Navbar: FC = () => {
 								globalContext?.navbarMenuLinks?.map(
 									(item: any, keys: number) => (
 										<Fragment key={keys}>
-											{item?.node?.url === "/services" ? (
+											{item?.node?.url === "/about" ? (
+												<motion.li
+													custom={keys}
+													initial={initial}
+													whileInView="animate"
+													viewport={{once: true}}
+													variants={arrayLoopStaggerChildren}
+													className="relative group py-0 px-2"
+												>
+													<div className="flex flex-row justify-center items-center gap-2 cursor-pointer">
+														<Link
+															href={`${item?.node?.url}`}
+															target={item?.node?.target}
+															onClick={resetNavbarStyling}
+														>
+															<span className="text-black uppercase font-aspektaMain group-hover:text-primary-three text-tiny text-center">
+																{item?.node?.label}
+															</span>
+														</Link>
+														<Image
+															width={550}
+															height={550}
+															alt="Black Arrow Icon"
+															onClick={displayAboutUsSublinks}
+															src="/svg/navigation-menu-dropdown-arrow-black.svg"
+															className={`${
+																aboutUsSublinksOpen ? "rotate-180" : "rotate-0"
+															} cursor-pointer w-[22px] h-[22px] object-contain object-center`}
+														/>
+													</div>
+													{aboutUsSublinksOpen ? (
+														<>
+															<SubmenuLinks
+																displayNavBackgroundColor={
+																	displayNavBackgroundColor
+																}
+																resetNavbarStyling={resetNavbarStyling}
+																sublinksOpen={aboutUsSublinksOpen}
+																sublinks={globalContext?.aboutUsSublinks}
+															/>
+														</>
+													) : null}
+												</motion.li>
+											) : item?.node?.url === "/services" ? (
 												<motion.li
 													custom={keys}
 													initial={initial}
@@ -319,51 +370,14 @@ const Navbar: FC = () => {
 													</div>
 													{ourServicesSublinksOpen ? (
 														<>
-															<div
-																onMouseLeave={resetNavbarStyling}
-																onMouseEnter={displayNavBackgroundColor}
-															>
-																<div className="fixed mt-[1.25rem] w-full mx-auto left-0 bg-white flex flex-col items-center justify-center">
-																	<ul
-																		className={
-																			styles.aboutUsSublinks +
-																			" px-28 py-6 w-full grid lg:grid-cols-4 xl:grid-cols-5 gap-4 border-b-8 border-solid border-primary-three z-[999]"
-																		}
-																	>
-																		{globalContext?.servicesSublinks?.length >
-																		0 ? (
-																			globalContext?.servicesSublinks?.map(
-																				(item: any, keys: number) => (
-																					<Fragment key={keys}>
-																						<motion.li
-																							custom={keys}
-																							initial={initial}
-																							whileInView="animate"
-																							viewport={{once: true}}
-																							variants={
-																								arrayLoopStaggerChildren
-																							}
-																						>
-																							<Link
-																								href={`${item?.node?.url}`}
-																								className={` ${
-																									ourServicesSublinksOpen
-																										? "w-full bg-lightGreyTwo hover:bg-primary-three text-center text-black hover:text-white"
-																										: "text-black"
-																								} block p-4 text-tiny uppercase font-aspektaMain`}
-																							>
-																								{item?.node?.label}
-																							</Link>
-																						</motion.li>
-																					</Fragment>
-																				)
-																			)
-																		) : (
-																			<></>
-																		)}
-																	</ul>
-																</div>
-															</div>
+															<SubmenuLinks
+																displayNavBackgroundColor={
+																	displayNavBackgroundColor
+																}
+																resetNavbarStyling={resetNavbarStyling}
+																sublinksOpen={ourServicesSublinksOpen}
+																sublinks={globalContext?.servicesSublinks}
+															/>
 														</>
 													) : null}
 												</motion.li>

@@ -167,6 +167,7 @@ export namespace ILinks {
 	export interface IMobileLinks extends INavbarMenuLinks {}
 	export interface ICopyrightLinks extends INavbarMenuLinks {}
 	export interface IFooterMenuLinks extends INavbarMenuLinks {}
+	export interface IAboutUsSublinks extends INavbarMenuLinks {}
 	export interface IServicesSublinks extends INavbarMenuLinks {}
 }
 
@@ -211,6 +212,7 @@ export type IGlobalProps = {
 	// Website Links
 	mobileLinks: ILinks.IMobileLinks;
 	copyrightLinks: ILinks.ICopyrightLinks;
+	aboutUsSublinks: ILinks.IAboutUsSublinks;
 	navbarMenuLinks: ILinks.INavbarMenuLinks;
 	footerMenuLinks: ILinks.IFooterMenuLinks;
 	servicesSublinks: ILinks.IServicesSublinks;
@@ -228,6 +230,7 @@ export type IGlobalContext = {
 	// Website Links
 	mobileLinks: ILinks.IMobileLinks;
 	copyrightLinks: ILinks.ICopyrightLinks;
+	aboutUsSublinks: ILinks.IAboutUsSublinks;
 	navbarMenuLinks: ILinks.INavbarMenuLinks;
 	footerMenuLinks: ILinks.IFooterMenuLinks;
 	servicesSublinks: ILinks.IServicesSublinks;

@@ -62,6 +62,36 @@ export const getMobileLinks = async () => {
 	}
 };
 
+// Navbar About Us Sublinks
+export const getAboutUsSublinks = async () => {
+	try {
+		const content: any = gql`
+			{
+				aboutUsSublinks: menuItems(where: {location: ABOUT_US_SUBLINKS}) {
+					edges {
+						node {
+							id
+							url
+							label
+						}
+					}
+				}
+			}
+		`;
+
+		const response: any = await client.query({
+			query: content,
+		});
+
+		return response?.data?.aboutUsSublinks?.edges;
+	} catch (error: unknown) {
+		console.log(error);
+		throw new Error(
+			"Something went wrong trying to fetch main menu links content"
+		);
+	}
+};
+
 // Navbar Our Services Sublinks
 export const getOurServicesSublinks = async () => {
 	try {

@@ -1,3 +1,5 @@
+import {ILinks} from "../context";
+
 // Components
 export type ICTA = {
 	title: string;
@@ -743,6 +745,12 @@ export type IRenderStars = {
 };
 export type IVideoWrapper = {
 	children: React.ReactNode;
+};
+export type ISubmenuLinks = {
+	sublinksOpen: boolean;
+	resetNavbarStyling: any;
+	displayNavBackgroundColor: any;
+	sublinks: ILinks.INavbarMenuLinks;
 };
 export type IYoutubeButton = {
 	title: string;
