@@ -30,6 +30,7 @@ import SkillsExperiences from "@/components/SkillsExperiences";
 import OurServicesGridTwo from "@/components/OurServicesGridTwo";
 import RequestAppointmentForm from "@/components/RequestAppointmentForm";
 import ExecutiveLeadershipsTeam from "@/components/ExecutiveLeadershipsTeam";
+import DevelopmentsGrid from "../DevelopmentsGrid";
 
 const RenderFlexibleContent: FC = () => {
 	const content = usePageContext();
@@ -37,7 +38,6 @@ const RenderFlexibleContent: FC = () => {
 
 	// Components Key Value Pairs
 	const componentMap: any = {
-		[`${FlexibleContent}_OurServicesGridTwo`]: OurServicesGridTwo,
 		[`${FlexibleContent}_Cta`]: CTA,
 		[`${FlexibleContent}_Hero`]: Hero,
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,
@@ -54,12 +54,14 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_GallerySlider`]: GallerySlider,
 		[`${FlexibleContent}_Accreditations`]: Accreditations,
 		[`${FlexibleContent}_TitleParagraph`]: TitleParagraph,
+		[`${FlexibleContent}_DevelopmentsGrid`]: DevelopmentsGrid,
 		[`${FlexibleContent}_FeaturedProjects`]: FeaturedProjects,
 		[`${FlexibleContent}_TestimonialsGrid`]: TestimonialsGrid,
+		[`${FlexibleContent}_TitleContentImage`]: TitleContentImage,
 		[`${FlexibleContent}_AboutContentImage`]: AboutContentImage,
 		[`${FlexibleContent}_ContentSectorGrid`]: ContentSectorGrid,
 		[`${FlexibleContent}_SkillsExperiences`]: SkillsExperiences,
-		[`${FlexibleContent}_TitleContentImage`]: TitleContentImage,
+		[`${FlexibleContent}_OurServicesGridTwo`]: OurServicesGridTwo,
 		[`${FlexibleContent}_RequestAppointmentForm`]: RequestAppointmentForm,
 		[`${FlexibleContent}_ExecutiveLeadershipsTeam`]: ExecutiveLeadershipsTeam,
 	};

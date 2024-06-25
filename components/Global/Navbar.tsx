@@ -67,7 +67,7 @@ const Navbar: FC = () => {
 			<nav className={styles.navbar + ` z-[999] h-fit w-full fixed`}>
 				<NoticeInfoBanner />
 				<div className="py-2 px-4 bg-lightGreyTwo flex items-center justify-between w-auto gap-2 lg:items-baseline">
-					<div className="mx-auto md:mx-0 flex items-center justify-center gap-4">
+					<div className="mx-auto lg:mx-0 flex items-center justify-center gap-4">
 						<h4 className="font-aspektaMain text-tiny text-black uppercase tracking-tight hidden lg:block">
 							Need a Civil Engineering Specialists?
 						</h4>

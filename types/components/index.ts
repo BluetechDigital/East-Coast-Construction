@@ -260,6 +260,11 @@ export type ITitleParagraph = {
 	paragraph: string;
 	displayParagraph: boolean;
 };
+export type IDevelopmentsGrid = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+};
 export type ITestimonialsGrid = {
 	title: string;
 	subtitle: string;

@@ -478,6 +478,13 @@ export const getAllFlexibleContentComponents = async (
             										}
             									}
             								}
+											... on ${postTypeFlexibleContent}_DevelopmentsGrid {
+            									fieldGroupName
+            									displaySection
+            									title
+            									subtitle
+												paragraph
+            								}
 											... on ${postTypeFlexibleContent}_ContactForm {
 												fieldGroupName
 												displaySection
