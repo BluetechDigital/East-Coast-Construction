@@ -93,6 +93,7 @@ const OurServices: FC<IOurServices> = ({
 												link={item?.link}
 												title={item?.title}
 												paragraph={item?.paragraph}
+												backgroundImage={item?.backgroundImage}
 											/>
 										</motion.div>
 									</Fragment>
@@ -117,6 +118,7 @@ const OurServices: FC<IOurServices> = ({
 											link={item?.link}
 											title={item?.title}
 											paragraph={item?.paragraph}
+											backgroundImage={item?.backgroundImage}
 										/>
 									</motion.div>
 								</Fragment>

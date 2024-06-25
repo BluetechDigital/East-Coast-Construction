@@ -23,10 +23,11 @@ import TitleParagraph from "@/components/TitleParagraph";
 import Accreditations from "@/components/Accreditations";
 import FeaturedProjects from "@/components/FeaturedProjects";
 import TestimonialsGrid from "@/components/TestimonialsGrid";
-import SkillsExperiences from "@/components/SkillsExperiences";
+import TitleContentImage from "@/components/TitleContentImage";
 import AboutContentImage from "@/components/AboutContentImage";
 import ContentSectorGrid from "@/components/ContentSectorGrid";
-import TitleContentImage from "@/components/TitleContentImage";
+import SkillsExperiences from "@/components/SkillsExperiences";
+import OurServicesGridTwo from "@/components/OurServicesGridTwo";
 import RequestAppointmentForm from "@/components/RequestAppointmentForm";
 import ExecutiveLeadershipsTeam from "@/components/ExecutiveLeadershipsTeam";
 
@@ -36,6 +37,7 @@ const RenderFlexibleContent: FC = () => {
 
 	// Components Key Value Pairs
 	const componentMap: any = {
+		[`${FlexibleContent}_OurServicesGridTwo`]: OurServicesGridTwo,
 		[`${FlexibleContent}_Cta`]: CTA,
 		[`${FlexibleContent}_Hero`]: Hero,
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,

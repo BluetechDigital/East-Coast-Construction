@@ -31,7 +31,7 @@ const OurServicesCardTwo: FC<IOurServicesCardTwo> = ({
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="text-center text-black uppercase font-aspektaMain text-base my-3 font-semibold mb-2"
+					className="text-center text-black uppercase font-aspektaMain text-paragraph my-3 font-semibold mb-2"
 				>
 					{title}
 				</motion.h3>
@@ -41,7 +41,7 @@ const OurServicesCardTwo: FC<IOurServicesCardTwo> = ({
 							? paragraph?.substring(0, 175) + "..."
 							: paragraph
 					}
-					tailwindStyling="text-black text-tiny text-center"
+					tailwindStyling="text-black text-paragraph text-center"
 				/>
 			</div>
 		</>

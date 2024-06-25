@@ -406,6 +406,29 @@ export type ITitleContentImage = {
 		}
 	];
 };
+export type IOurServicesGridTwo = {
+	title: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	servicesGrid: [
+		{
+			title: string;
+			paragraph: string;
+
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
+};
 export type IRequestAppointmentForm = {
 	title: string;
 	subtitle: string;
@@ -532,6 +555,14 @@ export type IOurServicesCard = {
 		url: string;
 		title: string;
 		target: string;
+	};
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
 	};
 };
 export type IDevelopmentsCard = {

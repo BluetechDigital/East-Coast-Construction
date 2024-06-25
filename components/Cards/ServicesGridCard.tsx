@@ -28,10 +28,10 @@ const ServicesGridCard: FC<IServicesGridCard> = ({
 					style={{
 						backgroundImage: `linear-gradient(
 										0deg,
-										rgba(0, 0, 115, 0.15),
-										rgba(0, 0, 115, 0.35),
-										rgba(0, 0, 115, 0.45),
-										rgba(0, 0, 115, 0.60)
+										rgba(0, 0, 0, 0.15),
+										rgba(0, 0, 0, 0.35),
+										rgba(0, 0, 0, 0.45),
+										rgba(0, 0, 0, 0.60)
 									),url("${image?.sourceUrl}")`,
 					}}
 				>

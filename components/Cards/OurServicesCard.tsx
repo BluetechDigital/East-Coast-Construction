@@ -9,7 +9,12 @@ import {initial, stagger, fadeInUp} from "@/animations/animations";
 // Components
 import Paragraph from "../Elements/Paragraph";
 
-const OurServicesCard: FC<IOurServicesCard> = ({link, title, paragraph}) => {
+const OurServicesCard: FC<IOurServicesCard> = ({
+	link,
+	title,
+	paragraph,
+	backgroundImage,
+}) => {
 	return (
 		<>
 			<Link href={`${link?.url}`} target={link?.target}>
@@ -17,7 +22,17 @@ const OurServicesCard: FC<IOurServicesCard> = ({link, title, paragraph}) => {
 					initial={initial}
 					whileInView={fadeInUp}
 					viewport={{once: true}}
-					className="group"
+					className="group bg-center bg-no-repeat bg-cover transition-all duration-500 ease-in-out md:hover:scale-105"
+					style={{
+						backgroundImage: `linear-gradient(
+										0deg,
+										rgba(0, 0, 0, 0.15),
+										rgba(0, 0, 0, 0.30),
+										rgba(0, 0, 0, 0.45),
+										rgba(0, 0, 0, 0.60),
+										rgba(0, 0, 0, 0.60)
+									),url("${backgroundImage?.sourceUrl}")`,
+					}}
 				>
 					<motion.div
 						initial={initial}
@@ -26,7 +41,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({link, title, paragraph}) => {
 						viewport={{once: true}}
 						className={
 							link?.url
-								? "flex flex-col items-center justify-center min-h-[300px] lg:min-h-[365px] xl:min-h-[350px] 2xl:min-h-[325px] h-full max-h-[450px] border-solid border-2 border-white hover:border-primary-three hover:bg-primary-three transition-all duration-500 ease-in-out"
+								? "flex flex-col items-center justify-center min-h-[300px] lg:min-h-[365px] xl:min-h-[350px] 2xl:min-h-[325px] h-full max-h-[450px] hover:bg-pureBlack/60 transition-all duration-500 ease-in-out"
 								: "hidden"
 						}
 					>
@@ -36,7 +51,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({link, title, paragraph}) => {
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="text-center lg:text-left text-white uppercase font-aspektaMain text-xl my-3 transition-all duration-500 ease-in-out"
+									className="my-3 max-w-xl mx-auto lg:mx-0 text-center lg:text-left text-white uppercase font-aspektaMain text-lg my-3 transition-all duration-500 ease-in-out"
 								>
 									{title}
 								</motion.h3>
@@ -46,7 +61,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({link, title, paragraph}) => {
 											? paragraph?.substring(0, 200) + "..."
 											: paragraph
 									}
-									tailwindStyling="text-center lg:text-left text-white text-base sm:text-base tracking-[0.05rem]"
+									tailwindStyling="text-center lg:text-left text-white text-base tracking-[0.05rem]"
 								/>
 							</div>
 							<motion.button

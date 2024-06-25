@@ -173,8 +173,38 @@ export const getAllFlexibleContentComponents = async (
 														title
 														target
 													}
+													backgroundImage {
+            											altText
+            											sourceUrl
+            											mediaDetails {
+            												height
+            												width
+            											}
+            										}
 												}
 											}
+											... on ${postTypeFlexibleContent}_OurServicesGridTwo {
+            									fieldGroupName
+												displaySection
+            									title
+            									buttonLink {
+            										url
+            										title
+            										target
+            									}
+            									servicesGrid {
+            									  	title
+            									  	paragraph
+            									  	image {
+            									  		altText
+            									  		sourceUrl
+            									  		mediaDetails {
+            									  			height
+            									  			width
+            									  		}
+            									  	}
+            									}
+            								}
 											... on ${postTypeFlexibleContent}_Gallery {
 												fieldGroupName
 												displaySection
