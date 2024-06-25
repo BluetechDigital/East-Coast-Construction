@@ -96,7 +96,7 @@ const Hero: FC<IHero> = ({
 										width={1000}
 										height={1000}
 										alt={`Facebook reviews logo`}
-										src="/img/facebook-logo-primary-circle-large-white.webp"
+										src="/img/facebook-logo.png"
 										className="my-auto lg:mx-0 w-10 h-10 object-cover object-center"
 									/>
 									<div className="flex flex-col gap-[7.5px]">
