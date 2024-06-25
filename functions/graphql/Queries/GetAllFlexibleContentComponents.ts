@@ -256,6 +256,25 @@ export const getAllFlexibleContentComponents = async (
             										sourceUrl
               									}
 											}
+											... on ${postTypeFlexibleContent}_Cta {
+												fieldGroupName
+												title
+												paragraph
+												displaySection
+												buttonLink {
+													url
+													title
+													target
+												}
+												backgroundImage {
+            										altText
+            										sourceUrl
+            										mediaDetails {
+            											height
+            											width
+            										}
+            									}
+											}
 											... on ${postTypeFlexibleContent}_CtaTwo {
 												fieldGroupName
 												paragraph
@@ -449,6 +468,30 @@ export const getAllFlexibleContentComponents = async (
 												title
 												subtitle
 												paragraph
+											}
+											... on ${postTypeFlexibleContent}_ServicesGrid {
+												fieldGroupName
+												displaySection
+												title
+												subtitle
+												paragraph
+												servicesGrid {
+													title
+													paragraph
+													link {
+														url
+														title
+														target
+													}
+													image {
+														altText
+														sourceUrl
+														mediaDetails {
+															height
+															width
+														}
+													}
+												}
 											}
 										}
 									}

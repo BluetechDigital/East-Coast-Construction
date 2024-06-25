@@ -250,7 +250,7 @@ const ContactForm: FC<IContactForm> = ({title, image, paragraph}) => {
 							backgroundImage: `url(${image?.sourceUrl})`,
 							clipPath: `inset(0 0 0 0 round 5% 20% 0 10%)`,
 						}}
-					></motion.div>
+					/>
 				</div>
 				<FormikForm />
 			</div>
@@ -263,7 +263,7 @@ const ContactForm: FC<IContactForm> = ({title, image, paragraph}) => {
 					allowFullScreen={true}
 					referrerPolicy="no-referrer-when-downgrade"
 					src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11929.502257739474!2d-71.2431287!3d41.6260129!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e454d707db68eb%3A0xd84db0f4ef76858c!2sEast%20Coast%20Construction!5e0!3m2!1sen!2suk!4v1719175225893!5m2!1sen!2suk"
-				></iframe>
+				/>
 			</div>
 		</>
 	);

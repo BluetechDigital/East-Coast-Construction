@@ -24,7 +24,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 			<div
 				className={
 					styles.testimonials +
-					` relative py-12 px-4 bg-white bg-cover bg-no-repeat bg-center`
+					` py-12 px-4 bg-white bg-cover bg-no-repeat bg-center`
 				}
 				style={{
 					backgroundImage: `linear-gradient(
@@ -36,7 +36,7 @@ const TestimonialsGrid: FC<ITestimonialsGrid> = ({
 									),url("/svg/background/grid-background-06.svg")`,
 				}}
 			>
-				<div className="lg:container relative m-auto flex flex-col items-center gap-6 sm:gap-12 lg:gap-20">
+				<div className="container mx-auto flex flex-col items-center gap-6 sm:gap-12 lg:gap-20">
 					<motion.div
 						initial={initial}
 						variants={stagger}

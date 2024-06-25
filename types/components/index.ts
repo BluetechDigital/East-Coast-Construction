@@ -1,4 +1,21 @@
 // Components
+export type ICTA = {
+	title: string;
+	paragraph: string;
+	buttonLink: {
+		url: string;
+		title: string;
+		target: string;
+	};
+	backgroundImage: {
+		altText: string;
+		sourceUrl: string;
+		mediaDetails: {
+			width: number;
+			height: number;
+		};
+	};
+};
 export type IHero = {
 	title: string;
 	ctaParagraph: string;
@@ -28,6 +45,11 @@ export type ICTATwo = {
 		title: string;
 		target: string;
 	};
+};
+export type ICareers = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
 };
 export type IHeroTwo = {
 	title: string;
@@ -155,11 +177,6 @@ export type ITeamMembers = {
 		}
 	];
 };
-export type ICareers = {
-	title: string;
-	subtitle: string;
-	paragraph: string;
-};
 export type IContactForm = {
 	title: string;
 	paragraph: string;
@@ -175,6 +192,30 @@ export type IContactForm = {
 export type ITestimonials = {
 	title: string;
 	subtitle: string;
+};
+export type IServicesGrid = {
+	title: string;
+	subtitle: string;
+	paragraph: string;
+	servicesGrid: [
+		{
+			title: string;
+			paragraph: string;
+			link: {
+				url: string;
+				title: string;
+				target: string;
+			};
+			image: {
+				altText: string;
+				sourceUrl: string;
+				mediaDetails: {
+					width: number;
+					height: number;
+				};
+			};
+		}
+	];
 };
 export type IGallerySlider = {
 	gallerySlider: [

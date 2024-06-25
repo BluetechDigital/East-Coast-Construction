@@ -5,6 +5,7 @@ import React, {FC, Fragment} from "react";
 import {usePageContext} from "@/context/providers/PageContextProvider";
 
 // Components
+import CTA from "@/components/CTA";
 import Hero from "@/components/Hero";
 import CTATwo from "@/components/CTATwo";
 import Gallery from "@/components/Gallery";
@@ -16,6 +17,7 @@ import TeamMembers from "@/components/TeamMembers";
 import ContactForm from "@/components/ContactForm";
 import OurServices from "@/components/OurServices";
 import Testimonials from "@/components/Testimonials";
+import ServicesGrid from "@/components/ServicesGrid";
 import GallerySlider from "@/components/GallerySlider";
 import TitleParagraph from "@/components/TitleParagraph";
 import Accreditations from "@/components/Accreditations";
@@ -34,6 +36,7 @@ const RenderFlexibleContent: FC = () => {
 
 	// Components Key Value Pairs
 	const componentMap: any = {
+		[`${FlexibleContent}_Cta`]: CTA,
 		[`${FlexibleContent}_Hero`]: Hero,
 		[`${FlexibleContent}_CtaTwo`]: CTATwo,
 		[`${FlexibleContent}_Careers`]: Careers,
@@ -45,6 +48,7 @@ const RenderFlexibleContent: FC = () => {
 		[`${FlexibleContent}_ContactForm`]: ContactForm,
 		[`${FlexibleContent}_OurServices`]: OurServices,
 		[`${FlexibleContent}_Testimonials`]: Testimonials,
+		[`${FlexibleContent}_ServicesGrid`]: ServicesGrid,
 		[`${FlexibleContent}_GallerySlider`]: GallerySlider,
 		[`${FlexibleContent}_Accreditations`]: Accreditations,
 		[`${FlexibleContent}_TitleParagraph`]: TitleParagraph,
