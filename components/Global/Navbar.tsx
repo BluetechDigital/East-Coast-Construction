@@ -57,8 +57,9 @@ const Navbar: FC = () => {
 	};
 
 	const resetNavbarStyling = () => {
-		setNavBackgroundSublinksOpen(false);
+		setAboutUsSublinksOpen(false);
 		setOurServicesSublinksOpen(false);
+		setNavBackgroundSublinksOpen(false);
 	};
 
 	return (
