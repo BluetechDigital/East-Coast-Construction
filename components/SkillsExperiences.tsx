@@ -9,19 +9,27 @@ import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {ISkillsExperiences} from "@/types/components/index";
 
+// Styling
+import styles from "@/styles/components/SkillsExperiences.module.scss";
+
 // Components
-import Paragraph from "./Elements/Paragraph";
+import Title from "@/components/Elements/Title";
+import Paragraph from "@/components/Elements/Paragraph";
 
 const SkillsExperiences: FC<ISkillsExperiences> = ({
 	title,
 	image,
 	paragraph,
+	displayImageFull,
 	skillsExperiencesGrid,
 }) => {
 	return (
 		<>
 			<div
-				className="relative overflow-hidden py-8 px-4 bg-center bg-no-repeat bg-cover"
+				className={
+					styles.skillsExperiences +
+					" skillsExperiences relative overflow-hidden py-8 px-4 bg-center bg-no-repeat bg-cover"
+				}
 				style={{
 					backgroundImage: `linear-gradient(
 								0deg,
@@ -34,20 +42,16 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 				<div className="lg:container px-0 mx-auto">
 					<div className="flex flex-wrap border-b border-accent-default my-4">
 						<div className="w-full lg:w-1/2 p-4">
-							<motion.h3
-								initial={initial}
-								whileInView={fadeInUp}
-								viewport={{once: true}}
-								className="my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-aspektaMain leading-relaxed text-center lg:text-left text-lg sm:text-xl lg:text-4xl"
-							>
-								{title}
-							</motion.h3>
+							<Title
+								content={title}
+								tailwindStyling="title my-3 max-w-xl mx-auto lg:mx-0 text-black uppercase font-aspektaMain leading-relaxed text-center lg:text-left text-lg sm:text-xl lg:text-4xl"
+							/>
 							<Paragraph
 								content={paragraph}
 								tailwindStyling="max-w-full lg:max-w-xl  leading-relaxed text-black text-lg text-center lg:text-left"
 							/>
 						</div>
-						<div className="w-full lg:w-1/2 p-4">
+						<div className="w-full lg:w-1/2 p-4 h-[500px]">
 							<Image
 								alt={image?.altText}
 								src={image?.sourceUrl}
@@ -59,9 +63,18 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 								}
 								className={`${
 									image?.sourceUrl
-										? "mx-auto xl:mx-0 px-16 lg:px-28 w-full h-[150px] lg:h-[200px] object-contain object-center"
+										? `${
+												displayImageFull
+													? "w-full h-full object-cover"
+													: "px-16 lg:px-28 mx-auto xl:mx-0 w-full h-[150px] lg:h-[200px] object-cover"
+										  } object-center`
 										: "hidden"
 								}`}
+								style={{
+									clipPath: `inset(${
+										displayImageFull ? "0 0 0 0 round 5% 20% 0 10%" : "0%"
+									})`,
+								}}
 							/>
 						</div>
 					</div>

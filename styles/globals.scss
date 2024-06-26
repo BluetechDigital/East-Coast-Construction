@@ -5,8 +5,9 @@
 @import "./base/fonts";
 @import "./base/colors";
 
-@import "./components/AboutContentImage.module.scss";
 @import "./components/GallerySlider.module.scss";
+@import "./components/AboutContentImage.module.scss";
+@import "./components/SkillsExperiences.module.scss";
 
 html,
 body {

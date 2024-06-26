@@ -46,17 +46,17 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 										<SwiperSlide>
 											<div className="w-full p-0">
 												<div
-													className="pt-24 pb-20 w-full h-[40vh] flex flex-col items-center justify-center relative bg-center bg-no-repeat bg-cover"
+													className="pt-24 pb-20 w-full h-[45vh] flex flex-col items-center justify-center relative bg-center bg-no-repeat bg-cover"
 													style={{
 														backgroundImage: `linear-gradient(
 																0deg,
-																rgb(0, 0, 0, 0.20),
-																rgba(0, 0, 0, 0.20),
-																rgba(0, 0, 0, 0.20)
+																rgb(0, 0, 0, 0.40),
+																rgba(0, 0, 0, 0.40),
+																rgba(0, 0, 0, 0.40)
 															),url("${item?.backgroundImage?.sourceUrl}")`,
 													}}
 												>
-													<div className="max-w-3xl mx-auto lg:mx-0 relative z-10 flex flex-col items-center px-8 sm:px-24">
+													<div className="max-w-4xl mx-auto lg:mx-0 relative z-10 flex flex-col items-center px-8 sm:px-24">
 														<motion.h3
 															initial={initialTwo}
 															whileInView={fadeIn}
@@ -67,23 +67,17 @@ const GallerySlider: FC<IGallerySlider> = ({gallerySlider}) => {
 														</motion.h3>
 														<Paragraph
 															content={item?.paragraph}
-															tailwindStyling="py-2 text-white leading-relaxed text-base text-center"
+															tailwindStyling="py-2 text-white leading-relaxed text-paragraph text-center"
 														/>
 														<Link
 															href={`${item?.buttonLink?.url}`}
 															target={item?.buttonLink?.target}
 															className={`${
-																item?.buttonLink?.url
-																	? "block mt-4 mx-auto"
-																	: "hidden"
+																item?.buttonLink?.url ? "block" : "hidden"
 															}`}
 														>
-															<div
-																className={`w-fit mx-auto lg:mx-0 py-4 px-6 text-center cursor-pointer bg-primary-three hover:bg-primary-dark transition-all ease-in-out duration-500`}
-															>
-																<span className="tracking-[0.10rem] text-white text-base uppercase font-aspektaMain text-center">
-																	{item?.buttonLink?.title}
-																</span>
+															<div className="mt-4 lg:mt-2 w-fit mx-auto lg:mx-0 py-4 px-10 cursor-pointer bg-accent-default hover:bg-accent-two transition-all ease-in-out duration-500 tracking-[0.10rem] text-white text-tiny md:text-base text-center uppercase font-aspektaMain">
+																{item?.buttonLink?.title}
 															</div>
 														</Link>
 													</div>

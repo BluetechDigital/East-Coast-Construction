@@ -291,6 +291,7 @@ export type IFeaturedProjects = {
 export type ISkillsExperiences = {
 	title: string;
 	paragraph: string;
+	displayImageFull: boolean;
 	image: {
 		altText: string;
 		sourceUrl: string;
