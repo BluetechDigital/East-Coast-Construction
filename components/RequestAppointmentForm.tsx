@@ -2,8 +2,8 @@
 
 // Imports
 import Link from "next/link";
-import {motion} from "framer-motion";
 import React, {FC} from "react";
+import {motion} from "framer-motion";
 import {useGlobalContext} from "@/context/global";
 import {IRequestAppointmentForm} from "@/types/components";
 import {initial, stagger, fadeInUp} from "@/animations/animations";

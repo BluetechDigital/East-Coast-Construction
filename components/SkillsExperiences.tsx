@@ -1,13 +1,9 @@
 // Imports
-import {
-	initial,
-	fadeInUp,
-	arrayLoopStaggerChildren,
-} from "../animations/animations";
 import Image from "next/image";
 import {FC, Fragment} from "react";
 import {motion} from "framer-motion";
 import {ISkillsExperiences} from "@/types/components/index";
+import {initial, arrayLoopStaggerChildren} from "../animations/animations";
 
 // Styling
 import styles from "@/styles/components/SkillsExperiences.module.scss";
