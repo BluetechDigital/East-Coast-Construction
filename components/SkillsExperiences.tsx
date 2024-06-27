@@ -62,7 +62,7 @@ const SkillsExperiences: FC<ISkillsExperiences> = ({
 										? `${
 												displayImageFull
 													? "w-full h-full object-cover"
-													: "px-16 lg:px-28 mx-auto xl:mx-0 w-full h-[150px] lg:h-[200px] object-cover"
+													: "px-16 lg:px-28 mx-auto xl:mx-0 w-full h-[150px] lg:h-[200px] object-contain"
 										  } object-center`
 										: "hidden"
 								}`}
