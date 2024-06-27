@@ -9,7 +9,7 @@ import {IRequestAppointmentForm} from "@/types/components";
 import {initial, stagger, fadeInUp} from "@/animations/animations";
 
 // Styling
-import styles from "@/styles/components/RequestAppointmentForm.module.scss";
+import styles from "@/styles/components/Forms.module.scss";
 
 // Components
 import Paragraph from "./Elements/Paragraph";

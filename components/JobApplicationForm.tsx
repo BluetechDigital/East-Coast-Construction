@@ -18,7 +18,7 @@ import {useFormik, Formik, Field, Form} from "formik";
 // Styling
 import styles from "@/styles/components/Forms.module.scss";
 
-const RequestAppointmentFormikForm: FC = () => {
+const JobApplicationForm: FC = () => {
 	const router = useRouter();
 
 	// Loading, Send & Error Message States
@@ -128,7 +128,10 @@ const RequestAppointmentFormikForm: FC = () => {
 		<>
 			<Formik onSubmit={formik?.onSubmit} initialValues={formik?.initialValues}>
 				<Form
-					className="py-6 px-12 xl:mr-8 w-full bg-black max-w-full lg:max-w-md xl:max-w-xl bg-center bg-no-repeat bg-cover"
+					className={
+						styles.jobApplicationForm +
+						" jobApplicationForm py-6 px-12 xl:mr-8 w-full bg-black max-w-full lg:max-w-md xl:max-w-xl bg-center bg-no-repeat bg-cover"
+					}
 					style={{
 						backgroundImage: `linear-gradient(
 								0deg,
@@ -354,4 +357,4 @@ const RequestAppointmentFormikForm: FC = () => {
 	);
 };
 
-export default RequestAppointmentFormikForm;
+export default JobApplicationForm;

@@ -51,7 +51,7 @@ const OurServicesCard: FC<IOurServicesCard> = ({
 									initial={initial}
 									whileInView={fadeInUp}
 									viewport={{once: true}}
-									className="my-3 max-w-xl mx-auto lg:mx-0 text-center lg:text-left text-white uppercase font-aspektaMain text-lg my-3 transition-all duration-500 ease-in-out"
+									className="my-3 max-w-xl mx-auto lg:mx-0 text-center lg:text-left text-white uppercase font-aspektaMain text-lg transition-all duration-500 ease-in-out"
 								>
 									{title}
 								</motion.h3>

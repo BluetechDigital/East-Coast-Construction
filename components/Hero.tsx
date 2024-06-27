@@ -31,7 +31,7 @@ const Hero: FC<IHero> = ({
 			<div className={styles.hero + " hero relative z-50 flex flex-col h-fit"}>
 				<div className="lg:relative pt-[65px] md:pt-[112px] lg:pt-[112px] flex flex-col lg:flex-row">
 					<div
-						className="w-full h-screen lg:h-[75vh] flex flex-col items-center lg:items-baseline justify-center relative bg-center bg-no-repeat bg-cover"
+						className="w-full h-[95vh] lg:h-[75vh] flex flex-col items-center lg:items-baseline justify-start lg:justify-center relative bg-center bg-no-repeat bg-cover"
 						style={{
 							backgroundImage: `linear-gradient(
 								180deg,
@@ -49,13 +49,13 @@ const Hero: FC<IHero> = ({
 								variants={stagger}
 								whileInView="animate"
 								viewport={{once: true}}
-								className="max-w-full lg:max-w-xl mx-auto lg:mx-0"
+								className="mt-[112px] lg:mt-0 max-w-full lg:max-w-xl mx-auto lg:mx-0"
 							>
 								<motion.h1
 									initial={initialTwo}
 									whileInView={fadeIn}
 									viewport={{once: true}}
-									className="text-center lg:text-left uppercase text-xl md:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
+									className="text-center lg:text-left uppercase text-xl sm:text-2xl lg:text-3xl xl:text-5xl 2xl:text-6xl text-white font-semibold leading-tight xl:leading-[2.5rem]"
 								>
 									{title}
 								</motion.h1>
@@ -126,23 +126,18 @@ const Hero: FC<IHero> = ({
 									</div>
 								</div>
 							</motion.div>
-							<motion.div
-								initial={initialTwo}
-								whileInView={fadeIn}
-								viewport={{once: true}}
-								className="block lg:hidden"
+							<Link
+								href={`${buttonLink?.url}`}
+								target={buttonLink?.target}
+								aria-label={`${buttonLink?.title}`}
+								className={`${
+									buttonLink?.url ? "w-full" : "hidden"
+								} block lg:hidden`}
 							>
-								<Link
-									href={`${buttonLink?.url}`}
-									target={buttonLink?.target}
-									aria-label={`${buttonLink?.title}`}
-									className={buttonLink?.url ? "w-full" : "hidden"}
-								>
-									<div className="w-full bg-accent-default hover:bg-accent-three p-4 lg:px-6 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-center text-lg">
-										{buttonLink?.title}
-									</div>
-								</Link>
-							</motion.div>
+								<div className="w-full bg-accent-default hover:bg-accent-three p-4 lg:px-6 transition-all duration-500 ease-in-out font-aspektaMain text-white font-extrabold uppercase text-center text-lg">
+									{buttonLink?.title}
+								</div>
+							</Link>
 							<div className="py-3 px-4 lg:p-6 bg-primary-three text-left xl:text-center">
 								<Link
 									href={`${buttonLinkTwo?.url}`}

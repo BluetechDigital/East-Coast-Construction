@@ -63,7 +63,7 @@ const DevelopmentsCard: FC<IDevelopmentsCard> = ({
 									tailwindStyling="mt-4 text-white text-base text-center lg:text-left"
 								/>
 							</div>
-							<button className="w-fit mx-auto lg:mx-0 py-4 px-6 text-center tracking-[0.10rem] text-white text-sm uppercase font-aspektaMain text-center cursor-pointer bg-accent-default hover:bg-accent-two transition-all ease-in-out duration-500">
+							<button className="w-fit mx-auto lg:mx-0 py-4 px-6 text-center tracking-[0.10rem] text-white text-sm uppercase font-aspektaMain cursor-pointer bg-accent-default hover:bg-accent-two transition-all ease-in-out duration-500">
 								View Project
 							</button>
 						</div>
