@@ -9,6 +9,16 @@
 		background-color: $white;
 	}
 
+	.react-date-picker {
+		.react-date-picker__wrapper {
+			@apply border-none;
+
+			input {
+				@apply bg-transparent;
+			}
+		}
+	}
+
 	.submitButton {
 		@apply w-fit flex items-center justify-center py-3 px-6 bg-accent-default hover:bg-accent-two transition-all duration-200 ease-in-out;
 	}

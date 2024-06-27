@@ -769,3 +769,8 @@ export type IBackHoverButton = {
 export type IBookAppointment = {
 	link: string;
 };
+
+// Date Picker
+type ValuePiece = Date | null;
+
+export type IDatePickerValue = ValuePiece | [ValuePiece, ValuePiece];

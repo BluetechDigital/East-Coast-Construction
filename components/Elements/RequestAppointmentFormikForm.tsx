@@ -11,11 +11,15 @@ import {
 import {motion} from "framer-motion";
 import {useRouter} from "next/navigation";
 import React, {useState, FC} from "react";
+import DatePicker from "react-date-picker";
 import ReCAPTCHA from "react-google-recaptcha";
 import {sendContactForm} from "@/lib/contactForm";
+import {IDatePickerValue} from "@/types/components";
 import {useFormik, Formik, Field, Form} from "formik";
 
 // Styling
+import "react-calendar/dist/Calendar.css";
+import "react-date-picker/dist/DatePicker.css";
 import styles from "@/styles/components/Forms.module.scss";
 
 const RequestAppointmentFormikForm: FC = () => {
@@ -25,6 +29,9 @@ const RequestAppointmentFormikForm: FC = () => {
 	const [loading, setLoading] = useState(false);
 	const [messageSent, setMessageSent] = useState(false);
 	const [errorMessage, setErrorMessage] = useState(false);
+
+	// Date Picker
+	const [value, onChange] = useState<IDatePickerValue>(new Date());
 
 	// A custom validation function. This must return an object
 	// which keys are symmetrical to our values/initialValues
@@ -76,6 +83,7 @@ const RequestAppointmentFormikForm: FC = () => {
 			phoneNumber: "",
 			subject: "",
 			message: "",
+			appointmentDate: `${value}`,
 		},
 		validate,
 		onSubmit: async (values: any) => {
@@ -268,6 +276,27 @@ const RequestAppointmentFormikForm: FC = () => {
 								onChange={formik?.handleChange}
 								value={formik?.values?.subject}
 								className="px-4 py-3 w-full text-tiny md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-white active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
+							/>
+						</motion.div>
+						<motion.div
+							initial={initial}
+							whileInView={fadeInUp}
+							viewport={{once: true}}
+							className="w-full"
+						>
+							<DatePicker
+								required
+								value={value}
+								format="dd-MM-y"
+								dayPlaceholder="dd"
+								onChange={onChange}
+								minDate={new Date()}
+								id="Appointment Date"
+								monthPlaceholder="mm"
+								yearPlaceholder="yyyy"
+								name="Appointment Date"
+								calendarAriaLabel="Toggle Appointment Date calendar"
+								className="px-4 py-3 w-full text-tiny font-aspektaRegular md:text-base text-black placeholder-black bg-white bg-opacity-90 outline-none border-[1px] border-white active:border-primary-darker focus:border-primary-darker focus:ring-[1px] focus:ring-primary-darker"
 							/>
 						</motion.div>
 						<motion.div
