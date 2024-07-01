@@ -55,20 +55,20 @@ const FeaturedProjectsSlider: FC<IFeaturedProjectsSlider> = ({
 
 	return (
 		<LazyMotion features={domMax}>
-			<div className="overflow-hidden px-4 lg:px-0">
-				<div className="pl-3/20">
-					<div className="relative">
+			<div className="w-full  px-0 lg:px-0">
+				<div className="w-full pl-3/20">
+					<div className="w-full relative">
 						{/* Prev */}
 						<motion.button
 							initial={{opacity: 0}}
 							animate={{opacity: 1}}
 							exit={{opacity: 0}}
+							onClick={() => arrowHandler("prev")}
 							className={
 								activeImage
 									? "hidden"
-									: "absolute top-1/2 left-[2.5%] z-10 w-8 lg:w-12 bg-white hover:bg-accent-default rounded-full p-4 transform -translate-y-1/2 transition-opacity duration-200 ease-in-out"
+									: "absolute top-1/2 left-[2.5%] z-10 p-3 lg:p-4 w-10 lg:w-12 bg-white hover:bg-accent-default rounded-full transform -translate-y-1/2 transition-opacity duration-200 ease-in-out"
 							}
-							onClick={() => arrowHandler("prev")}
 						>
 							<Image
 								width={500}
@@ -81,7 +81,7 @@ const FeaturedProjectsSlider: FC<IFeaturedProjectsSlider> = ({
 							initial={{translateX: "0px"}}
 							animate={{translateX: `${largeTranslate}px`}}
 							transition={{duration: 0.5, type: "spring"}}
-							className="flex flex-row py-12 items-center"
+							className="w-full flex py-12 items-center"
 						>
 							{globalContext?.developments?.length > 0 ? (
 								globalContext?.developments?.map((item: any, keys: number) => (
@@ -93,7 +93,7 @@ const FeaturedProjectsSlider: FC<IFeaturedProjectsSlider> = ({
 											viewport={{once: true}}
 											variants={arrayLoopStaggerChildren}
 											ref={largeSlideRef}
-											className={`flex-shrink-0 w-4/5 sm:w-2/3 pr-3 sm:pr-4 transition-opacity duration-200 ease-in-out ${
+											className={`flex-shrink-0 w-full md:w-4/5 lg:w-2/3 pr-3 sm:pr-4 transition-opacity duration-200 ease-in-out ${
 												keys !== activeSlide ? "opacity-50" : "opacity-100"
 											}`}
 										>
@@ -125,12 +125,12 @@ const FeaturedProjectsSlider: FC<IFeaturedProjectsSlider> = ({
 							initial={{opacity: 0}}
 							animate={{opacity: 1}}
 							exit={{opacity: 0}}
+							onClick={() => arrowHandler("next")}
 							className={
 								activeImage
 									? "hidden"
-									: "absolute z-10 w-8 bg-white hover:bg-accent-default rounded-full p-4 transform -translate-y-1/2 top-1/2 right-[2.5%] lg:right-[37%] lg:w-12 transition-opacity duration-200 ease-in-out"
+									: "absolute z-10 p-3 lg:p-4 w-10 lg:w-12 bg-white hover:bg-accent-default rounded-full transform -translate-y-1/2 top-1/2 right-[7%] lg:right-[37%] transition-opacity duration-200 ease-in-out"
 							}
-							onClick={() => arrowHandler("next")}
 						>
 							<Image
 								width={500}
