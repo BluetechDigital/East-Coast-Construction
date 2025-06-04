@@ -12,7 +12,7 @@ const DevelopmentsSlideCard: FC<IDevelopmentsSlideCard> = ({
 }) => {
 	return (
 		<>
-			<Link href={link} target={``}>
+			<Link href={link} target="_self" className="w-full">
 				<div
 					className="flex items-end bg-cover bg-no-repeat bg-center w-full h-[350px] md:h-[400px] lg:h-[550px] py-8 px-16"
 					style={{
